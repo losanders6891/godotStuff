@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cdgxxowwpxg47"]
+
+[ext_resource type="Script" uid="uid://bopo70gu85xmq" path="res://player.gd" id="1_4flbx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7die"]
+size = Vector2(2, 2)
+
+[node name="player" type="CharacterBody2D" unique_id=1569428923]
+collision_layer = 7
+script = ExtResource("1_4flbx")
+
+[node name="placeholder sprite" type="Polygon2D" parent="." unique_id=2067131269]
+scale = Vector2(2, 1)
+polygon = PackedVector2Array(0.5, 0, 0.5, 0, 1, 1, 0.5, 2, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1100505522]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_q7die")
