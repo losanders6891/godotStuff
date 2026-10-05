@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://x84ky6xdh74v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7die"]
+size = Vector2(4, 4)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=442742012]
+collision_layer = 7
+collision_mask = 7
+
+[node name="placeholder sprite" type="Polygon2D" parent="." unique_id=461779744]
+scale = Vector2(4, 2)
+color = Color(0.7543032, 0.15030897, 1.92523e-07, 1)
+polygon = PackedVector2Array(0.5, 0, 0.5, 0, 1, 1, 0.5, 2, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=23484241]
+position = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_q7die")
