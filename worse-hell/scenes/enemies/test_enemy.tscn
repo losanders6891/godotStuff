@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://x84ky6xdh74v"]
 
+[ext_resource type="Script" uid="uid://bs2jr1cnld6rl" path="res://scenes/enemies/test_enemy.gd" id="1_pnhpx"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q7die"]
 size = Vector2(4, 4)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=442742012]
-collision_layer = 7
+[node name="test_enemy" type="CharacterBody2D" unique_id=442742012]
+collision_layer = 5
 collision_mask = 7
+motion_mode = 1
+script = ExtResource("1_pnhpx")
 
 [node name="placeholder sprite" type="Polygon2D" parent="." unique_id=461779744]
 scale = Vector2(4, 2)
