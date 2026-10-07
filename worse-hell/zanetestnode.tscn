@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://c65suf21qvnyh"]
 
-[ext_resource type="Texture2D" uid="uid://8nww4rliroie" path="res://icon.svg" id="1_0fbet"]
-
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kpaqk"]
 
 [node name="zanes ui bullshit" type="Control" unique_id=649495162]
@@ -9,17 +7,16 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -2.0
-offset_right = -387.0
-offset_bottom = -135.0
+offset_left = 5.0
+offset_top = 45.0
+offset_right = -383.0
+offset_bottom = -88.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=694477957]
-visible = false
 layout_mode = 0
-offset_right = 646.0
+offset_right = 400.0
 offset_bottom = 420.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1443006045]
@@ -32,7 +29,7 @@ text = "Tabs"
 
 [node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer" unique_id=684676091]
 layout_mode = 2
-current_tab = 2
+current_tab = 1
 
 [node name="one" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=1937161539]
 visible = false
@@ -46,6 +43,15 @@ layout_mode = 2
 layout_mode = 2
 text = "one one"
 
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/TabContainer/one/PanelContainer" unique_id=126053906]
+custom_minimum_size = Vector2(250, -1)
+custom_maximum_size = Vector2(250, -1)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+offset_transform_position = Vector2(188.71, 0)
+scrollable = false
+
 [node name="PanelContainer2" type="PanelContainer" parent="MarginContainer/VBoxContainer/TabContainer/one" unique_id=890922708]
 layout_mode = 2
 
@@ -53,8 +59,11 @@ layout_mode = 2
 layout_mode = 2
 text = "one two"
 
+[node name="CheckButton" type="CheckButton" parent="MarginContainer/VBoxContainer/TabContainer/one/PanelContainer2" unique_id=1813871379]
+layout_mode = 2
+size_flags_horizontal = 8
+
 [node name="two" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=628778767]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -65,6 +74,19 @@ layout_mode = 2
 layout_mode = 2
 text = "two one"
 
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/TabContainer/two/PanelContainer" unique_id=1745244141]
+custom_minimum_size = Vector2(100, -1)
+custom_maximum_size = Vector2(100, -1)
+layout_mode = 2
+size_flags_horizontal = 8
+item_count = 3
+popup/item_0/text = "option 1"
+popup/item_0/id = 0
+popup/item_1/text = "option 2"
+popup/item_1/id = 1
+popup/item_2/text = "option 3"
+popup/item_2/id = 2
+
 [node name="PanelContainer2" type="PanelContainer" parent="MarginContainer/VBoxContainer/TabContainer/two" unique_id=1084071465]
 layout_mode = 2
 
@@ -73,6 +95,7 @@ layout_mode = 2
 text = "two two"
 
 [node name="three" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=1298549271]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
@@ -89,19 +112,6 @@ layout_mode = 2
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/three/PanelContainer2" unique_id=1570370348]
 layout_mode = 2
 text = "three two"
-
-[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1857850498]
-layout_mode = 0
-offset_left = -5.0
-offset_top = 3.0
-offset_right = 341.0
-offset_bottom = 309.0
-texture = ExtResource("1_0fbet")
-region_rect = Rect2(0.009681702, 0.54254913, 127.53631, 127.22941)
-patch_margin_left = 23
-patch_margin_top = 79
-patch_margin_right = 22
-patch_margin_bottom = 34
 
 [node name="MenuButton" type="MenuButton" parent="." unique_id=1208446688]
 layout_mode = 1
