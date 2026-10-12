@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://20pdpk14rdlh"]
+
+[node name="Battle" type="Node2D" unique_id=1539072574]
+
+[node name="placeholder sprite" type="Polygon2D" parent="." unique_id=1343471604]
+position = Vector2(2, 0)
+scale = Vector2(4, 2)
+color = Color(0.4337425, 0.715358, 0.21242413, 1)
+polygon = PackedVector2Array(0.5, 0, 0.5, 0, 1, 1, 1, 1, 0.5, 2, 0, 1)
+
+[node name="placeholder enemy sprite" type="Polygon2D" parent="." unique_id=949498892]
+position = Vector2(28, 0)
+scale = Vector2(4, 2)
+color = Color(0.7543032, 0.15030897, 1.92523e-07, 1)
+polygon = PackedVector2Array(0.5, 0, 0.5, 0.5, 1, 1, 0.5, 1.5, 0.5, 2, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=646826986]
+position = Vector2(18, 7)
+zoom = Vector2(32, 32)
