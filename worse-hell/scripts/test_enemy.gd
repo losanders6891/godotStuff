@@ -1,5 +1,6 @@
 class_name enemy extends CharacterBody2D
-@onready var sight: RayCast2D = $Sight
+
+@onready var sight: RayCast2D = $Sight #if broken, try just retyping before anything else
 
 ##if you can't figure out what this is asking for, then just ask me.
 @export var battle_Scene:PackedScene
