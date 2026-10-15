@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://opeuop63am0p"]
 
-[ext_resource type="PackedScene" uid="uid://c65suf21qvnyh" path="res://zanetestnode.tscn" id="1_yxeqe"]
-[ext_resource type="Script" uid="uid://ds5ql041q2548" path="res://zanetestnode.gd" id="2_a3f4n"]
+[ext_resource type="PackedScene" uid="uid://c65suf21qvnyh" path="res://scenes/U.I-Scenes/zanetestnode.tscn" id="1_yxeqe"]
+[ext_resource type="Script" uid="uid://ds5ql041q2548" path="res://scripts/ui_scripts/zanetestnode.gd" id="2_a3f4n"]
 
 [node name="Zanetestnode2" type="Node2D" unique_id=1562391566]
 

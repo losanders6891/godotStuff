@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://c11mldgb4v34x"]
+
+[ext_resource type="Texture2D" uid="uid://c041uvl5afu6s" path="res://sprites/images.png" id="1_7ixr3"]
+[ext_resource type="FontFile" uid="uid://cmdc8d0tv6n4x" path="res://pico-8.ttf/pico-8.ttf" id="2_k662t"]
+[ext_resource type="Script" uid="uid://4mu2s6acdc13" path="res://Menus and shit/china.gd" id="3_qc85u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kpaqk"]
+font = ExtResource("2_k662t")
+font_size = 75
+
+[node name="MainMenu" type="Control" unique_id=2049397358]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="japan" type="Sprite2D" parent="." unique_id=111481921]
+visible = false
+z_index = 7
+position = Vector2(575.99994, 324)
+scale = Vector2(2.1060328, 1.7753426)
+texture = ExtResource("1_7ixr3")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1304336819]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1345083136]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=807229081]
+layout_mode = 2
+text = "THE GAME"
+label_settings = SubResource("LabelSettings_kpaqk")
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer" unique_id=348842752]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1304867966]
+custom_minimum_size = Vector2(250, 0)
+custom_maximum_size = Vector2(250, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "PLAY GAME"
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2037760731]
+custom_minimum_size = Vector2(250, 0)
+custom_maximum_size = Vector2(250, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "OPTIONS"
+
+[node name="China" type="Button" parent="CenterContainer/VBoxContainer" unique_id=79107754 node_paths=PackedStringArray("flag")]
+z_index = 8
+custom_minimum_size = Vector2(250, 0)
+custom_maximum_size = Vector2(250, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "CHINA"
+script = ExtResource("3_qc85u")
+flag = NodePath("../../../japan")
+
+[node name="Button4" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1876055847]
+custom_minimum_size = Vector2(250, 0)
+custom_maximum_size = Vector2(250, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "QUIT GAME"
+
+[node name="Button5" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1981778974]
+custom_minimum_size = Vector2(250, 0)
+custom_maximum_size = Vector2(250, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "credits"
