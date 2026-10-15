@@ -14,13 +14,29 @@ texture_margin_bottom = 32.0
 [sub_resource type="Theme" id="Theme_0i1x4"]
 default_font = ExtResource("2_tsy5m")
 default_font_size = 16
+Label/colors/font_color = Color(1, 1, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
 Panel/styles/panel = SubResource("StyleBoxTexture_au18s")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0i1x4"]
 texture = ExtResource("3_k6u6g")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qd65t"]
+texture = ExtResource("3_k6u6g")
+modulate_color = Color(0.3372549, 0.9098039, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w5cto"]
+texture = ExtResource("3_k6u6g")
+modulate_color = Color(0.94509804, 0.6509804, 1, 1)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ji8pe"]
+texture = ExtResource("3_k6u6g")
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a83mk"]
+texture = ExtResource("3_k6u6g")
+modulate_color = Color(0.8498377, 0.9925392, 0.7861097, 1)
 
 [node name="DialogueLesh" type="Control" unique_id=37060702]
 layout_mode = 3
@@ -49,21 +65,24 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -234.0
-offset_top = -142.0
-offset_right = -34.0
-offset_bottom = -14.0
+offset_left = -240.0
+offset_top = -144.0
+offset_right = -40.0
+offset_bottom = -16.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_0i1x4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qd65t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_w5cto")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_ji8pe")
+theme_override_styles/focus = SubResource("StyleBoxTexture_a83mk")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=110048231]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 25.783997
 offset_right = 1116.0
-offset_bottom = 195.784
+offset_bottom = 190.784
 
 [node name="SpeakR" type="Label" parent="VBoxContainer" unique_id=72785389]
 layout_mode = 2
