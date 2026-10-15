@@ -1,31 +1,32 @@
 [gd_scene format=3 uid="uid://20pdpk14rdlh"]
 
-[ext_resource type="Script" uid="uid://g4je06adtubb" path="res://scenes/player_hp.gd" id="1_dn72j"]
+[ext_resource type="Script" uid="uid://g4je06adtubb" path="res://scripts/ui_scripts/battle_ui_scripts/player_hp.gd" id="1_dn72j"]
+[ext_resource type="Script" uid="uid://cwtkl2fjs27fa" path="res://scripts/ui_scripts/button.gd" id="1_p1qf1"]
+[ext_resource type="Script" uid="uid://eutd2h4ffcig" path="res://scripts/ui_scripts/battle_ui_scripts/enemy_hp.gd" id="2_th188"]
 
 [node name="Battle" type="Node2D" unique_id=1539072574]
 
 [node name="placeholder sprite" type="Polygon2D" parent="." unique_id=1343471604]
-position = Vector2(50, -26)
-scale = Vector2(69, 33)
+position = Vector2(-188, -164)
+scale = Vector2(168, 82.99999)
 color = Color(0.4337425, 0.715358, 0.21242413, 1)
 polygon = PackedVector2Array(0.5, 0, 0.5, 0, 1, 1, 1, 1, 0.5, 2, 0, 1)
 
 [node name="placeholder enemy sprite" type="Polygon2D" parent="." unique_id=949498892]
-position = Vector2(308, -32)
-scale = Vector2(78, 36.5)
+position = Vector2(499.00003, -159.00002)
+scale = Vector2(168, 77.058)
 color = Color(0.7543032, 0.15030897, 1.92523e-07, 1)
 polygon = PackedVector2Array(0.5, 0, 0.5, 0.5, 1, 1, 0.5, 1.5, 0.5, 2, 0, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=646826986]
 position = Vector2(215, 36)
-zoom = Vector2(3, 3)
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=2004429993]
 anchors_preset = -1
-offset_left = 101.0
-offset_top = 71.0
-offset_right = 318.0
-offset_bottom = 112.0
+offset_left = -361.0
+offset_top = 123.0
+offset_right = 791.0
+offset_bottom = 360.0
 theme_override_constants/h_separation = 2
 columns = 3
 
@@ -34,6 +35,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Attack"
+script = ExtResource("1_p1qf1")
 
 [node name="Button2" type="Button" parent="GridContainer" unique_id=1683089977]
 layout_mode = 2
@@ -48,9 +50,17 @@ size_flags_vertical = 3
 text = "Item"
 
 [node name="playerHP" type="Label" parent="." unique_id=854838030]
-offset_left = 61.0
-offset_top = 39.0
-offset_right = 129.0
-offset_bottom = 62.0
-text = "player hp yayyyyy"
+offset_left = -176.0
+offset_top = 14.0
+offset_right = -29.0
+offset_bottom = 37.0
+text = "player health here"
 script = ExtResource("1_dn72j")
+
+[node name="enemyHP" type="Label" parent="." unique_id=1032526562]
+offset_left = 532.0
+offset_top = 12.0
+offset_right = 654.0
+offset_bottom = 43.0
+text = "enemy health"
+script = ExtResource("2_th188")

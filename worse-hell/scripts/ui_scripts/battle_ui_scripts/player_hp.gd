@@ -1,6 +1,6 @@
 extends Label
 
-var plrHP = 30
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,5 +8,5 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	set_text("HP: " + str(plrHP))
+func _process(_delta: float) -> void:
+	set_text("HP: " + str(PartyStats.health))

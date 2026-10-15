@@ -18,6 +18,7 @@ config/icon="res://sprites/misc/icon.svg"
 [autoload]
 
 PartyStats="*uid://brkbxfcro2jrf"
+EnemyStats="*uid://dy5opiawj7uu3"
 
 [display]
 
