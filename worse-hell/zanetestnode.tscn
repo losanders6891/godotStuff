@@ -29,7 +29,7 @@ text = "Tabs"
 
 [node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer" unique_id=684676091]
 layout_mode = 2
-current_tab = 1
+current_tab = 2
 
 [node name="one" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=1937161539]
 visible = false
@@ -64,6 +64,7 @@ layout_mode = 2
 size_flags_horizontal = 8
 
 [node name="two" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=628778767]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -95,7 +96,6 @@ layout_mode = 2
 text = "two two"
 
 [node name="three" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=1298549271]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
