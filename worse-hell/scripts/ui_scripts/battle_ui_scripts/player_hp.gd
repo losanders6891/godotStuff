@@ -9,4 +9,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	set_text("HP: " + str(PartyStats.health))
+	set_text("HP: " + str(PartyStats.mainCharacterStats["Health"]))
