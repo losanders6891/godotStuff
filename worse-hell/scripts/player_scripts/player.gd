@@ -13,7 +13,7 @@ func _ready() -> void:
 	camera.zoom = Vector2(camera_zoom_x,camera_zoom_y)
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	
 	#gets direction from inputs, normalizes it, and applies movespeed to it
 	var dir = Input.get_vector("left","right","forward","backward").normalized()
