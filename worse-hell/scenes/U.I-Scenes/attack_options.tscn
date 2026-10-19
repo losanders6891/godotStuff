@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ckuadhvk71i5y"]
+
+[ext_resource type="Script" uid="uid://cwtkl2fjs27fa" path="res://scripts/ui_scripts/battle_ui_scripts/attackButton.gd" id="1_bt4gc"]
+
+[node name="attack options" type="GridContainer" unique_id=557134944]
+anchors_preset = -1
+offset_left = -3.0
+offset_top = 415.0
+offset_right = 1155.0
+offset_bottom = 645.0
+theme_override_constants/h_separation = 2
+columns = 3
+
+[node name="Button" type="Button" parent="." unique_id=1963768328]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "win"
+script = ExtResource("1_bt4gc")
+
+[node name="Button2" type="Button" parent="." unique_id=1230247168]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "lose"
+
+[node name="Button3" type="Button" parent="." unique_id=234741820]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "back"

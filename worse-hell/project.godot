@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="worseHell"
-run/main_scene="uid://be6tn2ngeu6dk"
+run/main_scene="uid://c11mldgb4v34x"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://sprites/misc/icon.svg"
 

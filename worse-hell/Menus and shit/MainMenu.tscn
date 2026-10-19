@@ -2,11 +2,20 @@
 
 [ext_resource type="Texture2D" uid="uid://c041uvl5afu6s" path="res://sprites/images.png" id="1_7ixr3"]
 [ext_resource type="FontFile" uid="uid://cmdc8d0tv6n4x" path="res://pico-8.ttf/pico-8.ttf" id="2_k662t"]
+[ext_resource type="Script" uid="uid://btit42jwlad7v" path="res://Menus and shit/level_select.gd" id="3_k662t"]
 [ext_resource type="Script" uid="uid://4mu2s6acdc13" path="res://Menus and shit/china.gd" id="3_qc85u"]
+[ext_resource type="Script" uid="uid://dn03g2k0c120b" path="res://Menus and shit/quit.gd" id="4_qc85u"]
+[ext_resource type="Script" uid="uid://4lnabx7h6i6b" path="res://Menus and shit/button_4.gd" id="5_skbm0"]
+[ext_resource type="PackedScene" uid="uid://be6tn2ngeu6dk" path="res://scenes/levels/testLevel.tscn" id="6_0so4e"]
+[ext_resource type="Script" uid="uid://u6t4givnrqtk" path="res://Menus and shit/button_5.gd" id="7_l1ppg"]
+[ext_resource type="PackedScene" uid="uid://20pdpk14rdlh" path="res://scenes/battle.tscn" id="8_0so4e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kpaqk"]
 font = ExtResource("2_k662t")
 font_size = 75
+
+[sub_resource type="LabelSettings" id="LabelSettings_bvuqh"]
+font_size = 32
 
 [node name="MainMenu" type="Control" unique_id=2049397358]
 layout_mode = 3
@@ -16,44 +25,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="japan" type="Sprite2D" parent="." unique_id=111481921]
-visible = false
-z_index = 7
-position = Vector2(575.99994, 324)
-scale = Vector2(2.1060328, 1.7753426)
-texture = ExtResource("1_7ixr3")
-
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1304336819]
+[node name="Main Menu" type="CenterContainer" parent="." unique_id=1304336819]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1345083136]
+[node name="VBoxContainer" type="VBoxContainer" parent="Main Menu" unique_id=1345083136]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=807229081]
+[node name="Label" type="Label" parent="Main Menu/VBoxContainer" unique_id=807229081]
 layout_mode = 2
 text = "THE GAME"
 label_settings = SubResource("LabelSettings_kpaqk")
 
-[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer" unique_id=348842752]
+[node name="HSeparator" type="HSeparator" parent="Main Menu/VBoxContainer" unique_id=348842752]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1304867966]
+[node name="Level Select" type="Button" parent="Main Menu/VBoxContainer" unique_id=1304867966 node_paths=PackedStringArray("menu", "levelselect")]
 custom_minimum_size = Vector2(250, 0)
 custom_maximum_size = Vector2(250, -1)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "PLAY GAME"
+text = "LEVEL SELECT"
+script = ExtResource("3_k662t")
+menu = NodePath("../..")
+levelselect = NodePath("../../../Level Select Menu")
 
-[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2037760731]
-custom_minimum_size = Vector2(250, 0)
-custom_maximum_size = Vector2(250, -1)
-layout_mode = 2
-size_flags_horizontal = 4
-text = "OPTIONS"
-
-[node name="China" type="Button" parent="CenterContainer/VBoxContainer" unique_id=79107754 node_paths=PackedStringArray("flag")]
+[node name="China" type="Button" parent="Main Menu/VBoxContainer" unique_id=79107754 node_paths=PackedStringArray("flag")]
 z_index = 8
 custom_minimum_size = Vector2(250, 0)
 custom_maximum_size = Vector2(250, -1)
@@ -63,16 +61,79 @@ text = "CHINA"
 script = ExtResource("3_qc85u")
 flag = NodePath("../../../japan")
 
-[node name="Button4" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1876055847]
+[node name="Quit" type="Button" parent="Main Menu/VBoxContainer" unique_id=1876055847]
 custom_minimum_size = Vector2(250, 0)
 custom_maximum_size = Vector2(250, -1)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "QUIT GAME"
+script = ExtResource("4_qc85u")
 
-[node name="Button5" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1981778974]
-custom_minimum_size = Vector2(250, 0)
-custom_maximum_size = Vector2(250, -1)
+[node name="Level Select Menu" type="CenterContainer" parent="." unique_id=582077901]
+visible = false
+layout_mode = 0
+offset_left = 375.0
+offset_top = 162.0
+offset_right = 777.0
+offset_bottom = 486.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Level Select Menu" unique_id=899422816]
 layout_mode = 2
-size_flags_horizontal = 4
-text = "credits"
+
+[node name="Label" type="Label" parent="Level Select Menu/VBoxContainer" unique_id=311556431]
+layout_mode = 2
+text = "LEVEL SELECT"
+label_settings = SubResource("LabelSettings_bvuqh")
+
+[node name="HSeparator" type="HSeparator" parent="Level Select Menu/VBoxContainer" unique_id=731593819]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Level Select Menu/VBoxContainer" unique_id=1696746716]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Level Select Menu/VBoxContainer/GridContainer" unique_id=1219556194]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "map 1: ghs"
+
+[node name="Button2" type="Button" parent="Level Select Menu/VBoxContainer/GridContainer" unique_id=1242476307]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "map 2: nothing yet"
+
+[node name="Button3" type="Button" parent="Level Select Menu/VBoxContainer/GridContainer" unique_id=1487379456]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "map 3: nothing yet"
+
+[node name="Button4" type="Button" parent="Level Select Menu/VBoxContainer/GridContainer" unique_id=867077294]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "       debug map       "
+script = ExtResource("5_skbm0")
+scene = ExtResource("6_0so4e")
+
+[node name="Button5" type="Button" parent="Level Select Menu/VBoxContainer/GridContainer" unique_id=1125662146]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "             battle            "
+script = ExtResource("7_l1ppg")
+scene = ExtResource("8_0so4e")
+
+[node name="backtomenu" type="Button" parent="Level Select Menu/VBoxContainer" unique_id=1625308813 node_paths=PackedStringArray("menu", "levelselect")]
+layout_mode = 2
+text = "BACK TO MENU"
+script = ExtResource("3_k662t")
+menu = NodePath("../../../Main Menu")
+levelselect = NodePath("../..")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1038334659]
+position = Vector2(576, 324)
+zoom = Vector2(2, 2)
+
+[node name="japan" type="Sprite2D" parent="." unique_id=111481921]
+visible = false
+z_index = 7
+position = Vector2(576, 324)
+scale = Vector2(1.0530167, 0.8876714)
+texture = ExtResource("1_7ixr3")
