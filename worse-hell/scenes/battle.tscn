@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://g4je06adtubb" path="res://scripts/ui_scripts/battle_ui_scripts/player_hp.gd" id="1_dn72j"]
 [ext_resource type="Script" uid="uid://eutd2h4ffcig" path="res://scripts/ui_scripts/battle_ui_scripts/enemy_hp.gd" id="2_th188"]
+[ext_resource type="Texture2D" uid="uid://bykmkwueqlxyr" path="res://sprites/the.png" id="3_a12nh"]
 [ext_resource type="PackedScene" uid="uid://bc53ev5vowuup" path="res://scenes/U.I-Scenes/battle_options.tscn" id="3_p1qf1"]
 [ext_resource type="PackedScene" uid="uid://ckuadhvk71i5y" path="res://scenes/U.I-Scenes/attack_options.tscn" id="4_a12nh"]
-[ext_resource type="Texture2D" uid="uid://bykmkwueqlxyr" path="res://sprites/the.png" id="3_a12nh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpir7"]
 atlas = ExtResource("3_a12nh")
@@ -284,7 +284,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
-"speed": 29.0
+"speed": 120.0
 }]
 
 [node name="Battle" type="Node2D" unique_id=1539072574]
@@ -312,12 +312,13 @@ offset_bottom = 37.0
 text = "player health here"
 script = ExtResource("1_dn72j")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1366519587]
-position = Vector2(109.000015, -400.00003)
+[node name="heavySphere" type="AnimatedSprite2D" parent="." unique_id=1366519587]
+position = Vector2(107, -292.00003)
 rotation = 7.104367
 scale = Vector2(-0.38653067, 0.5595578)
 sprite_frames = SubResource("SpriteFrames_bvuqh")
-frame_progress = 0.3531049
+autoplay = "default"
+frame_progress = 0.0085241245
 
 [node name="enemyHP" type="Label" parent="." unique_id=1032526562]
 offset_left = 532.0
