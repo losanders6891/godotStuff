@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://qw6wmp51i2s7"]
+[gd_scene format=3 uid="uid://be6tn2ngeu6dk"]
 
 [ext_resource type="PackedScene" uid="uid://cdgxxowwpxg47" path="res://scenes/player.tscn" id="1_ekkjd"]
 [ext_resource type="PackedScene" uid="uid://x84ky6xdh74v" path="res://scenes/enemies/test_enemy.tscn" id="2_ekkjd"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1tb1"]
 size = Vector2(62, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0i1x4"]
+size = Vector2(4, 4)
 
 [node name="level_1" type="Node2D" unique_id=1222247484]
 
@@ -31,3 +34,27 @@ movespeed = 58
 position = Vector2(54, 18)
 scale = Vector2(2, 2)
 battle_Scene = ExtResource("3_6l2lt")
+
+[node name="Area2D" type="Area2D" parent="test_enemy" unique_id=571165950]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_enemy/Area2D" unique_id=430689580]
+position = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_0i1x4")
+
+[node name="LeftEnemyRay1" type="RayCast2D" parent="test_enemy" unique_id=1859524248]
+position = Vector2(-1, 3)
+target_position = Vector2(0, 5)
+hit_from_inside = true
+
+[node name="RightEnemyRay1" type="RayCast2D" parent="test_enemy" unique_id=1781435215]
+position = Vector2(5, 3)
+target_position = Vector2(0, 5)
+hit_from_inside = true
+
+[node name="LeftWallRay1" type="RayCast2D" parent="test_enemy" unique_id=1589392922]
+position = Vector2(-1, 2)
+target_position = Vector2(-2, 0)
+
+[node name="RightWallRay1" type="RayCast2D" parent="test_enemy" unique_id=769083438]
+position = Vector2(5, 2)
+target_position = Vector2(2, 0)
