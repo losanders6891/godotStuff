@@ -1,4 +1,4 @@
-class_name enemy extends CharacterBody2D
+class_name EnemyOverworld extends CharacterBody2D
 
 @export_category("battle stats")
 @export var health:int = 10
