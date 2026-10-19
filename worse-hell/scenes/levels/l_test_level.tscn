@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://qw6wmp51i2s7"]
 
 [ext_resource type="PackedScene" uid="uid://cdgxxowwpxg47" path="res://scenes/player.tscn" id="1_ekkjd"]
-[ext_resource type="PackedScene" uid="uid://x84ky6xdh74v" path="res://scenes/test_enemy.tscn" id="2_6l2lt"]
+[ext_resource type="PackedScene" uid="uid://x84ky6xdh74v" path="res://scenes/enemies/test_enemy.tscn" id="2_ekkjd"]
 [ext_resource type="PackedScene" uid="uid://20pdpk14rdlh" path="res://scenes/battle.tscn" id="3_6l2lt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1tb1"]
@@ -27,7 +27,7 @@ camera_zoom_y = 4.0
 camera_zoom_x = 4.0
 movespeed = 58
 
-[node name="test_enemy" parent="." unique_id=442742012 instance=ExtResource("2_6l2lt")]
+[node name="test_enemy" parent="." unique_id=442742012 instance=ExtResource("2_ekkjd")]
 position = Vector2(54, 18)
 scale = Vector2(2, 2)
 battle_Scene = ExtResource("3_6l2lt")

@@ -5,6 +5,6 @@ func _process(_delta: float) -> void:
 	if is_colliding():
 		print("collision detected")
 		#sets the battle scene stats and then starts the battle. be sure to add any variables to the enemy stats global as well
-		EnemyStats.health = get_parent().health
-		EnemyStats.damage = get_parent().damage
+		EnemyStats.enemyOneStats["Health"]= get_parent().health
+		EnemyStats.enemyOneStats["Damage"] = get_parent().damage
 		get_tree().change_scene_to_packed(get_parent().battle_Scene)
