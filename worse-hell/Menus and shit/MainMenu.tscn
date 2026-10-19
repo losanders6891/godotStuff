@@ -5,6 +5,10 @@
 [ext_resource type="Script" uid="uid://btit42jwlad7v" path="res://Menus and shit/level_select.gd" id="3_k662t"]
 [ext_resource type="Script" uid="uid://4mu2s6acdc13" path="res://Menus and shit/china.gd" id="3_qc85u"]
 [ext_resource type="Script" uid="uid://dn03g2k0c120b" path="res://Menus and shit/quit.gd" id="4_qc85u"]
+[ext_resource type="Script" uid="uid://4lnabx7h6i6b" path="res://Menus and shit/button_4.gd" id="5_skbm0"]
+[ext_resource type="PackedScene" uid="uid://be6tn2ngeu6dk" path="res://scenes/levels/testLevel.tscn" id="6_0so4e"]
+[ext_resource type="Script" uid="uid://u6t4givnrqtk" path="res://Menus and shit/button_5.gd" id="7_l1ppg"]
+[ext_resource type="PackedScene" uid="uid://20pdpk14rdlh" path="res://scenes/battle.tscn" id="8_0so4e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kpaqk"]
 font = ExtResource("2_k662t")
@@ -101,6 +105,20 @@ text = "map 2: nothing yet"
 layout_mode = 2
 size_flags_horizontal = 6
 text = "map 3: nothing yet"
+
+[node name="Button4" type="Button" parent="Level Select Menu/VBoxContainer/GridContainer" unique_id=867077294]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "       debug map       "
+script = ExtResource("5_skbm0")
+scene = ExtResource("6_0so4e")
+
+[node name="Button5" type="Button" parent="Level Select Menu/VBoxContainer/GridContainer" unique_id=1125662146]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "             battle            "
+script = ExtResource("7_l1ppg")
+scene = ExtResource("8_0so4e")
 
 [node name="backtomenu" type="Button" parent="Level Select Menu/VBoxContainer" unique_id=1625308813 node_paths=PackedStringArray("menu", "levelselect")]
 layout_mode = 2

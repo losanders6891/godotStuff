@@ -9,5 +9,5 @@ func _ready() -> void:
 func _button_pressed():
 	
 	get_parent().visible = false
-	get_parent().get_children().enabled = false
+	#get_parent().get_children().enabled = false
 	get_parent().menu1.visible = true

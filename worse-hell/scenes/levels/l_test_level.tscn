@@ -1,3 +1,58 @@
+[gd_scene format=3 uid="uid://be6tn2ngeu6dk"]
+
+[ext_resource type="PackedScene" uid="uid://cdgxxowwpxg47" path="res://scenes/player.tscn" id="1_ekkjd"]
+[ext_resource type="PackedScene" uid="uid://x84ky6xdh74v" path="res://scenes/enemies/test_enemy.tscn" id="2_ekkjd"]
+[ext_resource type="PackedScene" uid="uid://20pdpk14rdlh" path="res://scenes/battle.tscn" id="3_6l2lt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1tb1"]
+size = Vector2(62, 2)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0i1x4"]
+radius = 10.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_au18s"]
+radius = 2.0
+
+[node name="level_1" type="Node2D" unique_id=1222247484]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1599992955]
+position = Vector2(0, 26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1555031888]
+position = Vector2(31, 1)
+shape = SubResource("RectangleShape2D_g1tb1")
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D" unique_id=1438898535]
+scale = Vector2(20.666668, 0.5)
+polygon = PackedVector2Array(0, 0, 0, 2, 0, 4, 3, 4, 3, 2, 3, 0)
+
+[node name="playerOfLevel" parent="." unique_id=1569428923 instance=ExtResource("1_ekkjd")]
+position = Vector2(-79, -53)
+scale = Vector2(2, 2)
+camera_zoom_y = 4.0
+camera_zoom_x = 4.0
+movespeed = 58
+
+[node name="test_enemy" parent="." unique_id=442742012 instance=ExtResource("2_ekkjd")]
+position = Vector2(54, 18)
+scale = Vector2(2, 2)
+battle_Scene = ExtResource("3_6l2lt")
+
+[node name="DetectThyNature" type="Area2D" parent="test_enemy" unique_id=1627892093]
+collision_layer = 2
+collision_mask = 2
+
+[node name="DetectThyCollision" type="CollisionShape2D" parent="test_enemy/DetectThyNature" unique_id=1824738351]
+position = Vector2(2, 2)
+shape = SubResource("CircleShape2D_0i1x4")
+
+[node name="CollisionOfGreaterPurpose" type="CollisionShape2D" parent="test_enemy" unique_id=326673453]
+position = Vector2(2, 2)
+shape = SubResource("CircleShape2D_au18s")
+
+[connection signal="body_entered" from="test_enemy/DetectThyNature" to="test_enemy" method="_on_detect_thy_nature_body_entered"]
+[connection signal="body_exited" from="test_enemy/DetectThyNature" to="test_enemy" method="_on_detect_thy_nature_body_exited"]
+
 [gd_scene format=4 uid="uid://b1wnn2xtqp554"]
 
 [ext_resource type="PackedScene" uid="uid://cdgxxowwpxg47" path="res://scenes/player.tscn" id="1_ekkjd"]
