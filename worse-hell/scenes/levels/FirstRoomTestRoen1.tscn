@@ -1,3 +1,5 @@
 [gd_scene format=3 uid="uid://c1t706nm5kair"]
 
 [node name="FirstRoomTestRoen1" type="Node2D" unique_id=365078348]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=327224777]
