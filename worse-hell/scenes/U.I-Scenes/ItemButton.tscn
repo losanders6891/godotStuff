@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://nqff27htq0sr"]
+
+[ext_resource type="Script" uid="uid://bnlan3hdn0u50" path="res://scenes/U.I-Scenes/item_button.gd" id="1_6jxat"]
+
+[node name="ItemButton" type="Button" unique_id=585865252]
+custom_maximum_size = Vector2(150, 100)
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_6jxat")

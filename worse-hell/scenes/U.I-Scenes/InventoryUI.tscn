@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bx3y5dffnfj6b"]
+
+[ext_resource type="Script" uid="uid://dcxxudagjn25g" path="res://scenes/U.I-Scenes/inventory.gd" id="1_2rfsb"]
+
+[node name="InventoryUi" type="Control" unique_id=305413234]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -695.0
+offset_bottom = -144.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UI Scrolling" type="ScrollContainer" parent="." unique_id=64562426]
+layout_mode = 0
+offset_right = 460.0
+offset_bottom = 500.0
+
+[node name="Inventory" type="PanelContainer" parent="UI Scrolling" unique_id=1493500490]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HFlowContainer" type="HFlowContainer" parent="UI Scrolling/Inventory" unique_id=1522614947]
+layout_mode = 2
+script = ExtResource("1_2rfsb")
