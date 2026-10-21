@@ -10,4 +10,9 @@ func _button_pressed():
 	print(EnemyStats.enemyOneStats["Health"])
 	if EnemyStats.enemyOneStats["Health"] == 0 :
 		print("enemy died")
-		
+		BattleGlobals.win()
+	else:
+		PartyStats.mainCharacterStats["Health"] -= EnemyStats.enemyOneStats["Damage"]
+		if PartyStats.mainCharacterStats["Health"] <= 0:
+			print("player died")
+			BattleGlobals.lose()
