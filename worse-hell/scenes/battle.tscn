@@ -3,11 +3,9 @@
 [ext_resource type="Script" uid="uid://g4je06adtubb" path="res://scripts/ui_scripts/battle_ui_scripts/player_hp.gd" id="1_dn72j"]
 [ext_resource type="Script" uid="uid://eutd2h4ffcig" path="res://scripts/ui_scripts/battle_ui_scripts/enemy_hp.gd" id="2_th188"]
 [ext_resource type="Texture2D" uid="uid://bykmkwueqlxyr" path="res://sprites/the.png" id="3_a12nh"]
-[ext_resource type="PackedScene" uid="uid://bc53ev5vowuup" path="res://scenes/U.I-Scenes/battle_options.tscn" id="3_p1qf1"]
-[ext_resource type="PackedScene" uid="uid://ckuadhvk71i5y" path="res://scenes/U.I-Scenes/attack_options.tscn" id="4_a12nh"]
-[ext_resource type="Texture2D" uid="uid://bykmkwueqlxyr" path="res://sprites/the.png" id="3_a12nh"]
-[ext_resource type="Script" uid="uid://3ji41pcvw8te" path="res://scenes/U.I-Scenes/attack1button.gd" id="4_a12nh"]
-[ext_resource type="Script" uid="uid://cgwbwhq7cod0k" path="res://scenes/fight.gd" id="4_lpir7"]
+[ext_resource type="Script" uid="uid://3ji41pcvw8te" path="res://scripts/ui_scripts/battle_ui_scripts/attack1button.gd" id="4_a12nh"]
+[ext_resource type="Script" uid="uid://cgwbwhq7cod0k" path="res://scripts/ui_scripts/battle_ui_scripts/fight.gd" id="4_lpir7"]
+[ext_resource type="Script" uid="uid://i7yh570n1in0" path="res://scripts/ui_scripts/battle_ui_scripts/attack2button.gd" id="6_6vh42"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpir7"]
 atlas = ExtResource("3_a12nh")
@@ -321,7 +319,6 @@ rotation = 7.104367
 scale = Vector2(-0.38653067, 0.5595578)
 sprite_frames = SubResource("SpriteFrames_bvuqh")
 autoplay = "default"
-frame_progress = 0.0085241245
 frame_progress = 0.7727623
 
 [node name="enemyHP" type="Label" parent="." unique_id=1032526562]
@@ -380,6 +377,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "kick"
+script = ExtResource("6_6vh42")
 
 [node name="Button3" type="Button" parent="option2" unique_id=1544234421]
 layout_mode = 2
