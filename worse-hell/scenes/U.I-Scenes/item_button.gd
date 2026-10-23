@@ -1,5 +1,6 @@
 extends Button
 
+var properties
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -7,4 +8,9 @@ func _ready() -> void:
 
 
 func _button_pressed():
-	free()
+	print(properties["damage"])
+	if properties["target"] == 0:
+		PartyStats.mainCharacterStats["Health"] += properties["damage"]
+	elif properties["target"] == 1:
+		EnemyStats.enemyOneStats["Health"] += properties["damage"]
+	queue_free()
