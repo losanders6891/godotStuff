@@ -4,13 +4,15 @@ class_name EnemyOverworld extends CharacterBody2D
 @export var health:int = 10
 @export var damage:int = 1
 var speed:int = 35
+var direction:int = 1
 var seePlayer:bool = false
 var player = null
 
+#@export var pathIsHereT1
+@onready var pathFollowT1
+
 ##if you can't figure out what this is asking for, then just ask me.
 @export var battle_Scene:PackedScene
-
-
 		
 	
 func _physics_process(delta: float) -> void:
