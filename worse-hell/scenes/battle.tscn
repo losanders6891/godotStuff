@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bykmkwueqlxyr" path="res://sprites/the.png" id="3_a12nh"]
 [ext_resource type="Script" uid="uid://3ji41pcvw8te" path="res://scripts/ui_scripts/battle_ui_scripts/attack1button.gd" id="4_a12nh"]
 [ext_resource type="Script" uid="uid://cgwbwhq7cod0k" path="res://scripts/ui_scripts/battle_ui_scripts/fight.gd" id="4_lpir7"]
+[ext_resource type="Script" uid="uid://bst1k2hxsatvq" path="res://scenes/itemaction.gd" id="5_4k1nj"]
 [ext_resource type="Script" uid="uid://i7yh570n1in0" path="res://scripts/ui_scripts/battle_ui_scripts/attack2button.gd" id="6_6vh42"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpir7"]
@@ -336,7 +337,7 @@ offset_right = 791.0
 offset_bottom = 246.0
 columns = 3
 
-[node name="Button" type="Button" parent="option1" unique_id=1058827242 node_paths=PackedStringArray("firstoptions", "secondoptions")]
+[node name="Attack" type="Button" parent="option1" unique_id=1058827242 node_paths=PackedStringArray("firstoptions", "secondoptions")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -345,17 +346,18 @@ script = ExtResource("4_lpir7")
 firstoptions = NodePath("..")
 secondoptions = NodePath("../../option2")
 
-[node name="Button2" type="Button" parent="option1" unique_id=166269826]
+[node name="Ability" type="Button" parent="option1" unique_id=166269826]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Ability"
 
-[node name="Button3" type="Button" parent="option1" unique_id=1359493499]
+[node name="Item" type="Button" parent="option1" unique_id=1359493499]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Item"
+script = ExtResource("5_4k1nj")
 
 [node name="option2" type="GridContainer" parent="." unique_id=1493078640]
 visible = false
@@ -365,21 +367,21 @@ offset_right = 791.0
 offset_bottom = 246.0
 columns = 3
 
-[node name="Button" type="Button" parent="option2" unique_id=1842814357]
+[node name="Punch" type="Button" parent="option2" unique_id=1842814357]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "punch"
 script = ExtResource("4_a12nh")
 
-[node name="Button2" type="Button" parent="option2" unique_id=1956381096]
+[node name="Kick" type="Button" parent="option2" unique_id=1956381096]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "kick"
 script = ExtResource("6_6vh42")
 
-[node name="Button3" type="Button" parent="option2" unique_id=1544234421]
+[node name="yes" type="Button" parent="option2" unique_id=1544234421]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3

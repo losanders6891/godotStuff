@@ -7,15 +7,24 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -695.0
-offset_bottom = -144.0
+offset_left = 530.0
+offset_top = -17.0
+offset_right = -151.0
+offset_bottom = -352.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="UI Scrolling" type="ScrollContainer" parent="." unique_id=64562426]
-layout_mode = 0
-offset_right = 460.0
-offset_bottom = 500.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14
+anchor_top = 0.036000002
+anchor_right = 0.14
+anchor_bottom = 0.036000002
+offset_left = -126.94002
+offset_top = 46.732
+offset_right = 219.02002
+offset_bottom = 284.856
 
 [node name="Inventory" type="PanelContainer" parent="UI Scrolling" unique_id=1493500490]
 custom_minimum_size = Vector2(250, 250)
