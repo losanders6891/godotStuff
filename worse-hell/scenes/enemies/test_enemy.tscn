@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://x84ky6xdh74v"]
 
-[ext_resource type="Script" uid="uid://bs2jr1cnld6rl" path="res://scripts/enemy_scripts/true_enemy.gd" id="1_pnhpx"]
+[ext_resource type="Script" uid="uid://bs2jr1cnld6rl" path="res://scripts/enemy_scripts/true_enemy_T1.gd" id="1_pnhpx"]
 [ext_resource type="Script" uid="uid://bchj2xufn17lo" path="res://scripts/enemy_scripts/sight.gd" id="2_kmxma"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q7die"]
