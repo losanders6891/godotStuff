@@ -6,5 +6,7 @@ func _process(_delta: float) -> void:
 		#sets the battle scene stats and then starts the battle. be sure to add any variables to the enemy stats global as well
 		EnemyStats.enemyOneStats["Health"]= get_parent().health
 		EnemyStats.enemyOneStats["Damage"] = get_parent().damage
+		get_parent().is_alive = false
+		BattleGlobals.save_scene()
 		get_tree().change_scene_to_packed(get_parent().battle_Scene)
 		print("seen player")
