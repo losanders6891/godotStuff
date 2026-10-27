@@ -20,6 +20,7 @@ config/icon="res://sprites/misc/icon.svg"
 PartyStats="*uid://brkbxfcro2jrf"
 EnemyStats="*uid://dy5opiawj7uu3"
 BattleGlobals="*uid://c5kbnroelutps"
+SaveStuff="*uid://cqmgvxx5xlg5y"
 
 [display]
 

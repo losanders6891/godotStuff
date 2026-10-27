@@ -1,4 +1,4 @@
-extends Button
+class_name AttackButton extends Button
 
 
 func _ready() -> void:
