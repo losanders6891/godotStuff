@@ -8,9 +8,6 @@ var direction:int = 1
 var seePlayer:bool = false
 var player = null
 
-#@export var pathIsHereT1
-@onready var pathFollowT1
-
 ##if you can't figure out what this is asking for, then just ask me.
 @export var battle_Scene:PackedScene
 		
