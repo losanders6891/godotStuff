@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dn03g2k0c120b" path="res://Menus and shit/quit.gd" id="4_qc85u"]
 [ext_resource type="Script" uid="uid://4lnabx7h6i6b" path="res://Menus and shit/button_4.gd" id="5_skbm0"]
 [ext_resource type="PackedScene" uid="uid://be6tn2ngeu6dk" path="res://scenes/levels/testLevel.tscn" id="6_0so4e"]
+[ext_resource type="PackedScene" uid="uid://c1t706nm5kair" path="res://scenes/levels/FirstRoomTestRoen1.tscn" id="6_7la6k"]
 [ext_resource type="Script" uid="uid://u6t4givnrqtk" path="res://Menus and shit/button_5.gd" id="7_l1ppg"]
 [ext_resource type="PackedScene" uid="uid://20pdpk14rdlh" path="res://scenes/battle.tscn" id="8_0so4e"]
 
@@ -105,6 +106,8 @@ text = "map 2: nothing yet"
 layout_mode = 2
 size_flags_horizontal = 6
 text = "map 3: nothing yet"
+script = ExtResource("7_l1ppg")
+scene = ExtResource("6_7la6k")
 
 [node name="Button4" type="Button" parent="Level Select Menu/VBoxContainer/GridContainer" unique_id=867077294]
 layout_mode = 2

@@ -246,5 +246,6 @@ acceleration = 800
 deceleration = 750
 
 [node name="test_enemy" parent="." unique_id=442742012 instance=ExtResource("5_c3biy")]
+position = Vector2(89.99999, -50.999996)
 scale = Vector2(5, 5)
 battle_Scene = ExtResource("6_48smr")
