@@ -3,9 +3,8 @@
 [ext_resource type="Script" uid="uid://g4je06adtubb" path="res://scripts/ui_scripts/battle_ui_scripts/player_hp.gd" id="1_dn72j"]
 [ext_resource type="Script" uid="uid://eutd2h4ffcig" path="res://scripts/ui_scripts/battle_ui_scripts/enemy_hp.gd" id="2_th188"]
 [ext_resource type="Texture2D" uid="uid://bykmkwueqlxyr" path="res://sprites/the.png" id="3_a12nh"]
-[ext_resource type="Script" uid="uid://3ji41pcvw8te" path="res://scripts/ui_scripts/battle_ui_scripts/attack1button.gd" id="4_a12nh"]
+[ext_resource type="Script" uid="uid://3ji41pcvw8te" path="res://scripts/ui_scripts/battle_ui_scripts/attackButton.gd" id="4_a12nh"]
 [ext_resource type="Script" uid="uid://cgwbwhq7cod0k" path="res://scripts/ui_scripts/battle_ui_scripts/fight.gd" id="4_lpir7"]
-[ext_resource type="Script" uid="uid://i7yh570n1in0" path="res://scripts/ui_scripts/battle_ui_scripts/attack2button.gd" id="6_6vh42"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpir7"]
 atlas = ExtResource("3_a12nh")
@@ -330,10 +329,10 @@ text = "enemy health"
 script = ExtResource("2_th188")
 
 [node name="option1" type="GridContainer" parent="." unique_id=1285634185]
-offset_left = -361.0
-offset_top = 89.0
-offset_right = 791.0
-offset_bottom = 246.0
+offset_left = -364.0
+offset_top = 203.0
+offset_right = 788.0
+offset_bottom = 360.0
 columns = 3
 
 [node name="Button" type="Button" parent="option1" unique_id=1058827242 node_paths=PackedStringArray("firstoptions", "secondoptions")]
@@ -359,10 +358,10 @@ text = "Item"
 
 [node name="option2" type="GridContainer" parent="." unique_id=1493078640]
 visible = false
-offset_left = -361.0
-offset_top = 89.0
-offset_right = 791.0
-offset_bottom = 246.0
+offset_left = -364.0
+offset_top = 199.0
+offset_right = 788.0
+offset_bottom = 356.0
 columns = 3
 
 [node name="Button" type="Button" parent="option2" unique_id=1842814357]
@@ -377,7 +376,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "kick"
-script = ExtResource("6_6vh42")
+script = ExtResource("4_a12nh")
 
 [node name="Button3" type="Button" parent="option2" unique_id=1544234421]
 layout_mode = 2
