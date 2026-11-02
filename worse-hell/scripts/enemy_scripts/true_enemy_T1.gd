@@ -4,7 +4,7 @@ class_name EnemyOverworld extends CharacterBody2D
 @export var health:int = 10
 @export var damage:int = 1
 var is_alive = true
-var speed:int = 35
+var speed:int = 100
 var direction:int = 1
 var seePlayer:bool = false
 var player = null
@@ -12,14 +12,16 @@ var player = null
 ##if you can't figure out what this is asking for, then just ask me.
 @export var battle_Scene:PackedScene
 		
-	
-func _physics_process(delta: float) -> void:
-	if !is_alive:
-		queue_free()
-	if seePlayer:
-		position += (player.position - position)/speed
+func _process(delta: float) -> void:
+	if get_parent() is PathFollow2D:
+		speed = 20
+		get_parent().progress += speed * delta
+	else: 
+		if !is_alive:
+			queue_free()
+		if seePlayer and player != null:
+			position += (player.position - position)/speed
 		
-	
 	
 func _on_detect_area_body_entered(body: Node2D) -> void:
 	player = body
