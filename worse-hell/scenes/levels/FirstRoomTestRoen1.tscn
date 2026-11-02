@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cdgxxowwpxg47" path="res://scenes/player.tscn" id="4_8qgcp"]
 [ext_resource type="PackedScene" uid="uid://x84ky6xdh74v" path="res://scenes/enemies/test_enemy.tscn" id="5_c3biy"]
 [ext_resource type="PackedScene" uid="uid://20pdpk14rdlh" path="res://scenes/battle.tscn" id="6_48smr"]
+[ext_resource type="Script" uid="uid://dt6gdq7o67idr" path="res://scenes/levels/mandoor.gd" id="7_ox3rx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48smr"]
 texture = ExtResource("1_uabgc")
@@ -226,6 +227,9 @@ sources/0 = SubResource("TileSetAtlasSource_48smr")
 sources/1 = SubResource("TileSetAtlasSource_ox3rx")
 sources/2 = SubResource("TileSetAtlasSource_1uiyt")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_rpall"]
+radius = 23.086792
+
 [node name="FirstRoomTestRoen1" type="Node2D" unique_id=365078348]
 
 [node name="TileMapGound" type="TileMapLayer" parent="." unique_id=327224777]
@@ -241,7 +245,7 @@ position = Vector2(58.999996, 8.999999)
 scale = Vector2(5, 5)
 camera_zoom_y = 4.0
 camera_zoom_x = 4.0
-movespeed = 80
+movespeed = 164
 acceleration = 800
 deceleration = 750
 
@@ -249,3 +253,13 @@ deceleration = 750
 position = Vector2(89.99999, -50.999996)
 scale = Vector2(5, 5)
 battle_Scene = ExtResource("6_48smr")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=917850039]
+script = ExtResource("7_ox3rx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1458243528]
+position = Vector2(-235, 54)
+shape = SubResource("CircleShape2D_rpall")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
