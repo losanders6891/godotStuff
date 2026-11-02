@@ -8,7 +8,10 @@ func _ready() -> void:
 func _button_pressed():
 	EnemyStats.enemyOneStats["Health"]-= PartyStats.mainCharacterAttacks["one"]
 	print(EnemyStats.enemyOneStats["Health"])
-	if EnemyStats.enemyOneStats["Health"] == 0 :
+	_is_dead();
+			
+static func _is_dead():
+	if EnemyStats.enemyOneStats["Health"] <= 0 :
 		print("enemy died")
 		BattleGlobals.win()
 	else:

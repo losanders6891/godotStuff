@@ -14,3 +14,4 @@ func _button_pressed():
 	elif properties["target"] == 1:
 		EnemyStats.enemyOneStats["Health"] += properties["damage"]
 	queue_free()
+	AttackButton._is_dead();
