@@ -315,7 +315,7 @@ text = "player health here"
 script = ExtResource("1_dn72j")
 
 [node name="heavySphere" type="AnimatedSprite2D" parent="." unique_id=1366519587]
-position = Vector2(107, -292.00003)
+position = Vector2(224.00003, -203.00003)
 rotation = 7.104367
 scale = Vector2(-0.38653067, 0.5595578)
 sprite_frames = SubResource("SpriteFrames_bvuqh")
