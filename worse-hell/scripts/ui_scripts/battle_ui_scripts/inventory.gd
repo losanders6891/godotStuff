@@ -1,6 +1,6 @@
 extends HFlowContainer
 
-const itembutton = preload("res://scenes/U.I-Scenes/ItemButton.tscn")
+const itembutton = preload("res://scenes/uiscenes/ItemButton.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in PartyStats.playerInventory:

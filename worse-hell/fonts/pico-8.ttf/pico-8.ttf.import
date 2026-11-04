@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cmdc8d0tv6n4x"
-path="res://.godot/imported/pico-8.ttf-bf389b5f409cf6cf54ea19550734f2bb.fontdata"
+path="res://.godot/imported/pico-8.ttf-48861ab414158e6bc5f607fd3740965d.fontdata"
 
 [deps]
 
-source_file="res://pico-8.ttf/pico-8.ttf"
-dest_files=["res://.godot/imported/pico-8.ttf-bf389b5f409cf6cf54ea19550734f2bb.fontdata"]
+source_file="res://fonts/pico-8.ttf/pico-8.ttf"
+dest_files=["res://.godot/imported/pico-8.ttf-48861ab414158e6bc5f607fd3740965d.fontdata"]
 
 [params]
 

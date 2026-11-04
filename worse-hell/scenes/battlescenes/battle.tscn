@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://g4je06adtubb" path="res://scripts/ui_scripts/battle_ui_scripts/player_hp.gd" id="1_dn72j"]
 [ext_resource type="Script" uid="uid://eutd2h4ffcig" path="res://scripts/ui_scripts/battle_ui_scripts/enemy_hp.gd" id="2_th188"]
-[ext_resource type="Texture2D" uid="uid://bykmkwueqlxyr" path="res://sprites/the.png" id="3_a12nh"]
+[ext_resource type="Texture2D" uid="uid://clpxodo5xb84p" path="res://sprites/Spritesheets/the.png" id="3_a12nh"]
 [ext_resource type="Script" uid="uid://3ji41pcvw8te" path="res://scripts/ui_scripts/battle_ui_scripts/attackButton.gd" id="4_a12nh"]
 [ext_resource type="Script" uid="uid://cgwbwhq7cod0k" path="res://scripts/ui_scripts/battle_ui_scripts/fight.gd" id="4_lpir7"]
-[ext_resource type="Script" uid="uid://bst1k2hxsatvq" path="res://scenes/itemaction.gd" id="5_4k1nj"]
-[ext_resource type="PackedScene" uid="uid://28r1bylkjf4y" path="res://scenes/U.I-Scenes/InventoryUI.tscn" id="7_4k1nj"]
+[ext_resource type="Script" uid="uid://bst1k2hxsatvq" path="res://scripts/ui_scripts/battle_ui_scripts/itemaction.gd" id="5_4k1nj"]
+[ext_resource type="PackedScene" uid="uid://28r1bylkjf4y" path="res://scenes/uiscenes/InventoryUI.tscn" id="7_4k1nj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpir7"]
 atlas = ExtResource("3_a12nh")

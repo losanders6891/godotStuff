@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://c11mldgb4v34x"]
 
-[ext_resource type="Texture2D" uid="uid://c041uvl5afu6s" path="res://sprites/images.png" id="1_7ixr3"]
-[ext_resource type="FontFile" uid="uid://cmdc8d0tv6n4x" path="res://pico-8.ttf/pico-8.ttf" id="2_k662t"]
-[ext_resource type="Script" uid="uid://btit42jwlad7v" path="res://Menus and shit/level_select.gd" id="3_k662t"]
-[ext_resource type="Script" uid="uid://4mu2s6acdc13" path="res://Menus and shit/china.gd" id="3_qc85u"]
-[ext_resource type="Script" uid="uid://dn03g2k0c120b" path="res://Menus and shit/quit.gd" id="4_qc85u"]
-[ext_resource type="Script" uid="uid://4lnabx7h6i6b" path="res://Menus and shit/button_4.gd" id="5_skbm0"]
+[ext_resource type="Texture2D" uid="uid://cb5t6hkjw0h4f" path="res://sprites/misc/images.png" id="1_7ixr3"]
+[ext_resource type="FontFile" uid="uid://cmdc8d0tv6n4x" path="res://fonts/pico-8.ttf/pico-8.ttf" id="2_k662t"]
+[ext_resource type="Script" uid="uid://btit42jwlad7v" path="res://scripts/ui_scripts/menu_ui_scripts/level_select.gd" id="3_k662t"]
+[ext_resource type="Script" uid="uid://4mu2s6acdc13" path="res://scripts/ui_scripts/menu_ui_scripts/china.gd" id="3_qc85u"]
+[ext_resource type="Script" uid="uid://dn03g2k0c120b" path="res://scripts/ui_scripts/menu_ui_scripts/quit.gd" id="4_qc85u"]
+[ext_resource type="Script" uid="uid://4lnabx7h6i6b" path="res://scripts/ui_scripts/menu_ui_scripts/button_4.gd" id="5_skbm0"]
 [ext_resource type="PackedScene" uid="uid://be6tn2ngeu6dk" path="res://scenes/levels/testLevel.tscn" id="6_0so4e"]
 [ext_resource type="PackedScene" uid="uid://c1t706nm5kair" path="res://scenes/levels/FirstRoomTestRoen1.tscn" id="6_7la6k"]
-[ext_resource type="Script" uid="uid://u6t4givnrqtk" path="res://Menus and shit/button_5.gd" id="7_l1ppg"]
-[ext_resource type="PackedScene" uid="uid://20pdpk14rdlh" path="res://scenes/battle.tscn" id="8_0so4e"]
+[ext_resource type="Script" uid="uid://u6t4givnrqtk" path="res://scripts/ui_scripts/menu_ui_scripts/button_5.gd" id="7_l1ppg"]
+[ext_resource type="PackedScene" uid="uid://20pdpk14rdlh" path="res://scenes/battlescenes/battle.tscn" id="8_0so4e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kpaqk"]
 font = ExtResource("2_k662t")

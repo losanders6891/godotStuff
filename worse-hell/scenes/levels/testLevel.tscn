@@ -1,11 +1,10 @@
 [gd_scene format=4 uid="uid://be6tn2ngeu6dk"]
 
-[ext_resource type="PackedScene" uid="uid://cdgxxowwpxg47" path="res://scenes/player.tscn" id="1_ekkjd"]
-[ext_resource type="Script" uid="uid://dmkhet6bq5c4y" path="res://scenes/levels/level_init.gd" id="1_ipuiq"]
+[ext_resource type="PackedScene" uid="uid://cdgxxowwpxg47" path="res://scenes/overworldscenes/player.tscn" id="1_ekkjd"]
+[ext_resource type="Script" uid="uid://dmkhet6bq5c4y" path="res://scripts/level_scripts/mandellroom/level_init.gd" id="1_ipuiq"]
 [ext_resource type="PackedScene" uid="uid://x84ky6xdh74v" path="res://scenes/enemies/test_enemy.tscn" id="2_ekkjd"]
-[ext_resource type="PackedScene" uid="uid://20pdpk14rdlh" path="res://scenes/battle.tscn" id="3_6l2lt"]
-[ext_resource type="Texture2D" uid="uid://c041uvl5afu6s" path="res://sprites/images.png" id="4_av222"]
-[ext_resource type="Texture2D" uid="uid://dag4dssygat8n" path="res://sprites/the heavy.jpeg" id="5_xc5bg"]
+[ext_resource type="PackedScene" uid="uid://20pdpk14rdlh" path="res://scenes/battlescenes/battle.tscn" id="3_6l2lt"]
+[ext_resource type="Texture2D" uid="uid://cb5t6hkjw0h4f" path="res://sprites/misc/images.png" id="4_av222"]
 [ext_resource type="Texture2D" uid="uid://8nww4rliroie" path="res://sprites/misc/icon.svg" id="6_3fwgh"]
 [ext_resource type="Texture2D" uid="uid://baqlkmoirfym4" path="res://sprites/misc/Digital_Reproduction_of_the_Know-Nothing_Party_Flag.png" id="7_4a472"]
 
@@ -764,7 +763,7 @@ texture = ExtResource("4_av222")
 33:21/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ufd0o"]
-texture = ExtResource("5_xc5bg")
+texture = ExtResource("6_3fwgh")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://28r1bylkjf4y"]
 
-[ext_resource type="Script" uid="uid://dcxxudagjn25g" path="res://scenes/U.I-Scenes/inventory.gd" id="1_rq8yd"]
+[ext_resource type="Script" uid="uid://dcxxudagjn25g" path="res://scripts/ui_scripts/battle_ui_scripts/inventory.gd" id="1_xupep"]
 
 [node name="ScrollContainer" type="ScrollContainer" unique_id=7589172]
 custom_minimum_size = Vector2(150, 150)
@@ -17,4 +17,4 @@ size_flags_vertical = 3
 
 [node name="HFlowContainer" type="HFlowContainer" parent="Inventory" unique_id=937199515]
 layout_mode = 2
-script = ExtResource("1_rq8yd")
+script = ExtResource("1_xupep")
