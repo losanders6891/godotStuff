@@ -1,5 +1,5 @@
 extends Node
-var loseScene: PackedScene = preload("res://scenes/levels/testLevel.tscn")
+var loseScene: PackedScene = preload("res://scenes/MainMenu.tscn")
 var currentLevel: PackedScene = preload("res://scenes/levels/testLevel.tscn")
 var scene_saved = false
 
@@ -15,9 +15,10 @@ func save_scene():
 		if !node.has_method("save"):
 			print("persistent node '%s' is missing a save() function, skipped" % node.name)
 			continue
-
+		
 		# Call the node's save function.
 		var node_data = node.call("save")
+		print(node_data["filename"] + " saved")
 		# JSON provides a static method to serialized JSON string.
 		var json_string = JSON.stringify(node_data)
 		
@@ -25,15 +26,17 @@ func save_scene():
 		save_file.store_line(json_string)
 	scene_saved = true
 	save_file.close()
-	
-		
 func load_scene():
 	if not FileAccess.file_exists("user://savegame.save"):
 		return
 	var save_nodes = get_tree().get_nodes_in_group("Persist")
+	var player = get_tree().get_nodes_in_group("player")
+	var player_path: String
 	for i in save_nodes:
-		i.queue_free()
-
+		if !i in player:
+			i.queue_free()
+		else:
+			player_path = i.get_scene_file_path()
 
 	var save_file = FileAccess.open("user://savegame.save", FileAccess.READ)
 	while save_file.get_position() < save_file.get_length():
@@ -50,14 +53,17 @@ func load_scene():
 
 		# Get the data from the JSON object.
 		var node_data = json.data
-		print(node_data["filename"])
-		print(node_data["parent"])
+		var new_object: Node2D
 		# Firstly, we need to create the object and add it to the tree and set its position.
-		
-		var new_object = load(node_data["filename"]).instantiate()
-		get_node(node_data["parent"]).add_child(new_object)
-		new_object.position = Vector2(node_data["pos_x"], node_data["pos_y"])
-
+		print(node_data["filename"])
+		#print(node_data["is_alive"])
+		if node_data["filename"] != player_path:
+			new_object = load(node_data["filename"]).instantiate()
+			get_node(node_data["parent"]).add_child(new_object)
+			new_object.position = Vector2(node_data["pos_x"], node_data["pos_y"])
+		else: 
+			new_object = get_node(node_data["path_in_scene"])
+			new_object.position = Vector2(node_data["pos_x"], node_data["pos_y"])
 		# Now we set the remaining variables.
 		for i in node_data.keys():
 			if i == "filename" or i == "parent" or i == "pos_x" or i == "pos_y":
@@ -71,8 +77,6 @@ func win():
 	
 func lose():
 	PartyStats.mainCharacterStats["Health"] = PartyStats.mainCharacterStats["MaxHealth"]
-	get_tree().change_scene_to_packed(BattleGlobals.loseScene)
 	scene_saved = false
-
-#func _process(delta: float) -> void:
-	pass
+	get_tree().change_scene_to_packed(BattleGlobals.loseScene)
+	
