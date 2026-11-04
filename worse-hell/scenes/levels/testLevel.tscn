@@ -2462,6 +2462,7 @@ radius = 13.0
 radius = 2.0615528
 
 [sub_resource type="Curve2D" id="Curve2D_snsj5"]
+bake_interval = 7.0
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -6.5, -10.5, 0, 0, 0, 0, -24.500004, -10.499997, 0, 0, 0, 0, -24.500004, -21.999996, 0, 0, 0, 0, -6.500004, -21.999998, 0, 0, 0, 0, -6.500004, -10.499999)
 }
@@ -2522,6 +2523,7 @@ rotation = 3.1415925
 [node name="true_enemyT2" parent="PathEnemyType1/PET1path2D/PET1pathfollow2D" unique_id=298511648 groups=["Persist"] instance=ExtResource("2_ekkjd")]
 position = Vector2(2, 1.999999)
 rotation = -3.1415925
+battle_Scene = ExtResource("3_6l2lt")
 
 [node name="detect_area" type="Area2D" parent="PathEnemyType1/PET1path2D/PET1pathfollow2D/true_enemyT2" unique_id=340268476]
 position = Vector2(6.5000005, 5.4999995)

@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://3ji41pcvw8te" path="res://scripts/ui_scripts/battle_ui_scripts/attackButton.gd" id="4_a12nh"]
 [ext_resource type="Script" uid="uid://cgwbwhq7cod0k" path="res://scripts/ui_scripts/battle_ui_scripts/fight.gd" id="4_lpir7"]
 [ext_resource type="Script" uid="uid://bst1k2hxsatvq" path="res://scenes/itemaction.gd" id="5_4k1nj"]
+[ext_resource type="PackedScene" uid="uid://28r1bylkjf4y" path="res://scenes/U.I-Scenes/InventoryUI.tscn" id="7_4k1nj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpir7"]
 atlas = ExtResource("3_a12nh")
@@ -351,12 +352,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Ability"
 
-[node name="Item" type="Button" parent="option1" unique_id=1359493499]
+[node name="Item" type="Button" parent="option1" unique_id=1359493499 node_paths=PackedStringArray("invgui")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Item"
 script = ExtResource("5_4k1nj")
+invgui = NodePath("../../ScrollContainer")
 
 [node name="option2" type="GridContainer" parent="." unique_id=1493078640]
 visible = false
@@ -387,3 +389,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "yes"
+
+[node name="ScrollContainer" parent="." unique_id=7589172 instance=ExtResource("7_4k1nj")]
+visible = false
