@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://3ji41pcvw8te" path="res://scripts/ui_scripts/battle_ui_scripts/attackButton.gd" id="4_a12nh"]
 [ext_resource type="Script" uid="uid://cgwbwhq7cod0k" path="res://scripts/ui_scripts/battle_ui_scripts/fight.gd" id="4_lpir7"]
 [ext_resource type="Script" uid="uid://bst1k2hxsatvq" path="res://scenes/itemaction.gd" id="5_4k1nj"]
-[ext_resource type="Script" uid="uid://i7yh570n1in0" path="res://scripts/ui_scripts/battle_ui_scripts/attack2button.gd" id="6_6vh42"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpir7"]
 atlas = ExtResource("3_a12nh")
@@ -373,6 +372,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "punch"
 script = ExtResource("4_a12nh")
+attack = "one"
 
 [node name="Kick" type="Button" parent="option2" unique_id=1956381096]
 layout_mode = 2
@@ -380,6 +380,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "kick"
 script = ExtResource("4_a12nh")
+attack = "two"
 
 [node name="yes" type="Button" parent="option2" unique_id=1544234421]
 layout_mode = 2

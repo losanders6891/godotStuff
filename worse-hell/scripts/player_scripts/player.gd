@@ -28,11 +28,12 @@ func _physics_process(_delta: float) -> void:
 func save():
 	var save_dict = {
 		"filename" : get_scene_file_path(),
+		"path_in_scene" : get_path(),
 		"parent" : get_parent().get_path(),
 		"pos_x" : position.x, # Vector2 is not supported by JSON
 		"pos_y" : position.y,
 		
 		#to simplify code
-		"is_alive" : true
+		#"is_alive" : true
 		}
 	return save_dict

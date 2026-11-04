@@ -5,5 +5,6 @@ extends Node2D
 func _ready() -> void:
 	if !BattleGlobals.scene_saved:
 		BattleGlobals.save_scene()
+		BattleGlobals.load_scene()
 	else:
 		BattleGlobals.load_scene()
