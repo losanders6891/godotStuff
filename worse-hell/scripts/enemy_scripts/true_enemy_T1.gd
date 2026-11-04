@@ -1,10 +1,12 @@
 class_name EnemyOverworld extends CharacterBody2D
 
 @export_category("battle stats")
+@onready var collision_shape: CollisionShape2D = $CollisionShape2D
+@export var offsetOfCollider:int = 10
 @export var health:int = 10
 @export var damage:int = 1
 var is_alive = true
-var speed:int = 100
+var speed:int = 20
 var direction:int = 1
 var seePlayer:bool = false
 var player = null
@@ -19,10 +21,17 @@ func _process(delta: float) -> void:
 	else: 
 		if !is_alive:
 			queue_free()
-		if seePlayer and player != null:
-			position += (player.position - position)/speed
-		
 	
+func _physics_process(delta: float) -> void:
+	if not get_parent() is PathFollow2D:
+		if seePlayer and player != null:
+			#position += (player.position - position)/speed
+			var Endir = global_position.direction_to(player.global_position)
+			velocity = Endir * speed
+		else:
+			velocity = Vector2.ZERO
+		move_and_slide()
+		
 func _on_detect_area_body_entered(body: Node2D) -> void:
 	player = body
 	seePlayer = true
@@ -30,6 +39,8 @@ func _on_detect_area_body_entered(body: Node2D) -> void:
 func _on_detect_area_body_exited(body: Node2D) -> void:
 	player = null
 	seePlayer = false
+	
+
 
 func save():
 	var save_dict = {

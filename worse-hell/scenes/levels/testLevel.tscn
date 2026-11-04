@@ -2456,8 +2456,9 @@ sources/1 = SubResource("TileSetAtlasSource_ufd0o")
 sources/2 = SubResource("TileSetAtlasSource_7r5sg")
 sources/3 = SubResource("TileSetAtlasSource_m5hap")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0i1x4"]
-radius = 13.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ypyc6"]
+radius = 7.5
+height = 15.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_au18s"]
 radius = 2.0615528
@@ -2465,20 +2466,18 @@ radius = 2.0615528
 [sub_resource type="Curve2D" id="Curve2D_snsj5"]
 bake_interval = 7.0
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -6.5, -10.5, 0, 0, 0, 0, -24.500004, -10.499997, 0, 0, 0, 0, -24.500004, -21.999996, 0, 0, 0, 0, -6.500004, -21.999998, 0, 0, 0, 0, -6.500004, -10.499999)
+"points": PackedVector2Array(0, 0, 0, 0, -24, -18.499996, 0, 0, 0, 0, -44, -18.499992, 0, 0, 0, 0, -44, -34.499992, 0, 0, 0, 0, -24, -34.499996, 0, 0, 0, 0, -24, -18.499996)
 }
 point_count = 5
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mqley"]
+radius = 7.500004
+height = 15.000008
 
 [node name="level_1" type="Node2D" unique_id=1222247484]
 script = ExtResource("1_ipuiq")
 
 [node name="Main level(maybeunnecessary)" type="Node2D" parent="." unique_id=2000739413]
-
-[node name="true_enemy2TRY" parent="Main level(maybeunnecessary)" unique_id=210889352 groups=["Persist"] instance=ExtResource("2_ekkjd")]
-position = Vector2(97, -28)
-scale = Vector2(2, 2)
-damage = 2
-battle_Scene = ExtResource("3_6l2lt")
 
 [node name="player" parent="Main level(maybeunnecessary)" unique_id=1569428923 groups=["Persist"] instance=ExtResource("1_ekkjd")]
 position = Vector2(0, 1)
@@ -2510,8 +2509,8 @@ battle_Scene = ExtResource("3_6l2lt")
 [node name="detect_area" type="Area2D" parent="true_enemyT1" unique_id=606291385]
 
 [node name="detection_zone" type="CollisionShape2D" parent="true_enemyT1/detect_area" unique_id=491052601]
-position = Vector2(2, 2)
-shape = SubResource("CircleShape2D_0i1x4")
+position = Vector2(-3, 2)
+shape = SubResource("CapsuleShape2D_ypyc6")
 
 [node name="inner_body_T1" type="CollisionShape2D" parent="true_enemyT1" unique_id=204410349]
 position = Vector2(2, 2)
@@ -2523,11 +2522,11 @@ rotation = -3.1415925
 scale = Vector2(2, 2)
 
 [node name="PET1path2D" type="Path2D" parent="PathEnemyType1" unique_id=960576968]
-position = Vector2(6.5, 10.499998)
+position = Vector2(6.5, 17.999998)
 curve = SubResource("Curve2D_snsj5")
 
 [node name="PET1pathfollow2D" type="PathFollow2D" parent="PathEnemyType1/PET1path2D" unique_id=1129113935]
-position = Vector2(-6.5, -10.5)
+position = Vector2(-24, -18.499996)
 rotation = 3.1415925
 
 [node name="true_enemyT2" parent="PathEnemyType1/PET1path2D/PET1pathfollow2D" unique_id=298511648 instance=ExtResource("2_ekkjd")]
@@ -2539,8 +2538,8 @@ battle_Scene = ExtResource("3_6l2lt")
 position = Vector2(6.5000005, 5.4999995)
 
 [node name="detection_zone" type="CollisionShape2D" parent="PathEnemyType1/PET1path2D/PET1pathfollow2D/true_enemyT2/detect_area" unique_id=1568957808]
-position = Vector2(-4.500001, -3.499999)
-shape = SubResource("CircleShape2D_0i1x4")
+position = Vector2(-9.5, -3.499998)
+shape = SubResource("CapsuleShape2D_mqley")
 
 [node name="inner_body" type="CollisionShape2D" parent="PathEnemyType1/PET1path2D/PET1pathfollow2D/true_enemyT2" unique_id=1651326784]
 position = Vector2(2, 2)
