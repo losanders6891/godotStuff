@@ -374,6 +374,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "punch"
 script = ExtResource("4_a12nh")
+attack = "one"
 
 [node name="Kick" type="Button" parent="option2" unique_id=1956381096]
 layout_mode = 2
@@ -381,6 +382,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "kick"
 script = ExtResource("4_a12nh")
+attack = "two"
 
 [node name="yes" type="Button" parent="option2" unique_id=1544234421]
 layout_mode = 2
