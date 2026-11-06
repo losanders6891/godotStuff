@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://vd6mi00rq40x"]
 
 [ext_resource type="Texture2D" uid="uid://bn3lrqpulw7di" path="res://sprites/misc/old_paper_stock_02_by_ft.png" id="1_1ph61"]
-[ext_resource type="FontFile" path="res://pico-8.ttf/pico-8.ttf" id="2_tsy5m"]
+[ext_resource type="FontFile" uid="uid://cmdc8d0tv6n4x" path="res://fonts/pico-8.ttf/pico-8.ttf" id="2_tsy5m"]
 [ext_resource type="Texture2D" uid="uid://baqlkmoirfym4" path="res://sprites/misc/Digital_Reproduction_of_the_Know-Nothing_Party_Flag.png" id="3_k6u6g"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_au18s"]
