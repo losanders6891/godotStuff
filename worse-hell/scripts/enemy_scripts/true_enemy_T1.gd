@@ -13,6 +13,7 @@ var player = null
 ##note: this is hard coded right now, you may have to manually change it
 @export var battle_Scene:PackedScene = preload("res://scenes/battlescenes/battle.tscn")
 
+
 func _ready() -> void:
 	if !self in get_tree().get_nodes_in_group("Persist"):
 		add_to_group("Persist")
@@ -34,15 +35,6 @@ func _physics_process(delta: float) -> void:
 			velocity = Vector2.ZERO
 		move_and_slide()
 		
-func _on_detect_area_body_entered(body: Node2D) -> void:
-	player = body
-	seePlayer = true
-
-func _on_detect_area_body_exited(body: Node2D) -> void:
-	player = null
-	seePlayer = false
-	
-
 
 func save():
 	var save_dict = {
@@ -53,3 +45,14 @@ func save():
 		"is_alive" : is_alive,
 		}
 	return save_dict
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	player = body
+	seePlayer = true
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	player = null
+	seePlayer = false
+	
