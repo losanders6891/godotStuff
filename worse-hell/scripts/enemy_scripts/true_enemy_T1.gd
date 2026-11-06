@@ -11,14 +11,11 @@ var direction:int = 1
 var seePlayer:bool = false
 var player = null
 ##note: this is hard coded right now, you may have to manually change it
-@export var battle_Scene:PackedScene = preload("res://scenes/battle.tscn")
+@export var battle_Scene:PackedScene = preload("res://scenes/battlescenes/battle.tscn")
 
 func _ready() -> void:
 	if !self in get_tree().get_nodes_in_group("Persist"):
 		add_to_group("Persist")
-
-
-func _physics_process(delta: float) -> void:
 	
 	if seePlayer:
 		position += (player.position - position)/speed
@@ -26,8 +23,7 @@ func _process(delta: float) -> void:
 	if get_parent() is PathFollow2D:
 		speed = 20
 		get_parent().progress += speed * delta
-	else: 
-	
+		
 func _physics_process(delta: float) -> void:
 	if not get_parent() is PathFollow2D:
 		if seePlayer and player != null:

@@ -1,6 +1,6 @@
 extends Node
-var loseScene: PackedScene = preload("res://scenes/MainMenu.tscn")
-var currentLevel: PackedScene = preload("res://scenes/levels/testLevel.tscn")
+var loseScene: PackedScene = preload("res://scenes/uiscenes/MainMenu.tscn")
+var currentLevel: PackedScene = preload("res://scenes/levels/demoLevel.tscn")
 var scene_saved = false
 
 func save_scene():
