@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://c1t706nm5kair"]
 
 [ext_resource type="PackedScene" uid="uid://cdgxxowwpxg47" path="res://scenes/overworldscenes/player.tscn" id="1_c3biy"]
+[ext_resource type="Texture2D" uid="uid://dnawg7blmggis" path="res://sprites/Spritesheets/Player Spritesheets/RoenOverworldSpritesheetAlpha.png" id="3_48smr"]
 [ext_resource type="Texture2D" uid="uid://uys1volfo3kp" path="res://sprites/Spritesheets/pixil-frame-0 (2).png" id="3_c3biy"]
 [ext_resource type="PackedScene" uid="uid://x84ky6xdh74v" path="res://scenes/enemies/test_enemy.tscn" id="5_c3biy"]
 [ext_resource type="Script" uid="uid://dt6gdq7o67idr" path="res://scripts/level_scripts/mandellroom/mandoor.gd" id="7_ox3rx"]
@@ -224,8 +225,72 @@ sources/0 = SubResource("TileSetAtlasSource_48smr")
 sources/1 = SubResource("TileSetAtlasSource_ox3rx")
 sources/2 = SubResource("TileSetAtlasSource_1uiyt")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ox3rx"]
+atlas = ExtResource("3_48smr")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1uiyt"]
+atlas = ExtResource("3_48smr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tbjx"]
+atlas = ExtResource("3_48smr")
+region = Rect2(0, 96, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rpall"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ox3rx")
+}],
+"loop": 1,
+"name": &"Idle back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1uiyt")
+}],
+"loop": 1,
+"name": &"Idle front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tbjx")
+}],
+"loop": 1,
+"name": &"Idle left",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"Idle right",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"Walk back",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"Walk front",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"Walk left",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"Walk right",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_rpall"]
-radius = 23.086792
+radius = 28.79236
 
 [node name="FirstRoomTestRoen1" type="Node2D" unique_id=365078348]
 
@@ -238,12 +303,17 @@ tile_map_data = PackedByteArray("AAD4////AgAFAAUAAAD5////AgAFAAUAAAD6////AgAFAAU
 tile_set = SubResource("TileSet_2i324")
 
 [node name="player" parent="." unique_id=1569428923 instance=ExtResource("1_c3biy")]
+position = Vector2(0, 15)
 scale = Vector2(4.720001, 4.24)
 camera_zoom_y = 4.0
 camera_zoom_x = 4.0
 movespeed = 164
 acceleration = 800
 deceleration = 750
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player" unique_id=579113430]
+sprite_frames = SubResource("SpriteFrames_rpall")
+animation = &"Idle right"
 
 [node name="test_enemy" parent="." unique_id=442742012 instance=ExtResource("5_c3biy")]
 position = Vector2(89.99999, -50.999996)
