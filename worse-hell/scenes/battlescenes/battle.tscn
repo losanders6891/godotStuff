@@ -369,13 +369,15 @@ offset_right = 788.0
 offset_bottom = 356.0
 columns = 3
 
-[node name="Punch" type="Button" parent="option2" unique_id=1842814357]
+[node name="Punch" type="Button" parent="option2" unique_id=1842814357 node_paths=PackedStringArray("option1", "option2")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "punch"
 script = ExtResource("4_a12nh")
 attack = "one"
+option1 = NodePath("../../option1")
+option2 = NodePath("..")
 
 [node name="Kick" type="Button" parent="option2" unique_id=1956381096]
 layout_mode = 2
@@ -392,6 +394,7 @@ size_flags_vertical = 3
 text = "yes"
 
 [node name="inventorypopup" parent="." unique_id=7589172 instance=ExtResource("7_4k1nj")]
+visible = false
 custom_maximum_size = Vector2(500, 200)
 offset_left = 410.0
 offset_top = 47.0
