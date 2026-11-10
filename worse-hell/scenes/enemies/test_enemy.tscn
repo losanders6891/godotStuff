@@ -6,9 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q7die"]
 size = Vector2(4, 4)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q7die"]
-radius = 9.0
-height = 34.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_kmxma"]
+radius = 27.856777
 
 [node name="test_enemy" type="CharacterBody2D" unique_id=442742012]
 scale = Vector2(2, 2)
@@ -35,13 +34,13 @@ position = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_q7die")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1627443950]
-collision_layer = 2
+collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=478060507]
-position = Vector2(-11.5, 2)
+position = Vector2(2, 2)
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_q7die")
+shape = SubResource("CircleShape2D_kmxma")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

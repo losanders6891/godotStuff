@@ -13,7 +13,7 @@ point_count = 10
 [node name="DemoLevel" type="Node2D" unique_id=857531336]
 
 [node name="player" parent="." unique_id=1569428923 instance=ExtResource("2_n4muf")]
-position = Vector2(88, 88)
+position = Vector2(-8, 72)
 scale = Vector2(2, 2)
 camera_zoom_y = 4.0
 camera_zoom_x = 4.0
@@ -22,7 +22,6 @@ camera_zoom_x = 4.0
 
 [node name="Path2D" type="Path2D" parent="Node2D" unique_id=2098373953]
 position = Vector2(80, 8)
-scale = Vector2(0.625, 1)
 curve = SubResource("Curve2D_5vcdo")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Path2D" unique_id=144658564]
