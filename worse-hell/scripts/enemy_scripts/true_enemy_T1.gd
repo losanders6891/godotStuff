@@ -5,6 +5,7 @@ class_name EnemyOverworld extends CharacterBody2D
 @export var offsetOfCollider:int = 10
 @export var health:int = 10
 @export var damage:int = 1
+@export var ename:String = "w"
 var is_alive = true
 var speed:int = 20
 var direction:int = 1
@@ -42,7 +43,12 @@ func save():
 		"parent" : get_parent().get_path(),
 		"pos_x" : position.x, # Vector2 is not supported by JSON
 		"pos_y" : position.y,
+		"rot": rotation,
 		"is_alive" : is_alive,
+		"name": ename,
+		"damage": damage,
+		"health": name
+		
 		}
 	return save_dict
 

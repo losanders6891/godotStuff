@@ -1,21 +1,18 @@
 class_name AttackButton extends Button
 @export var attack: String
+@export var option1: GridContainer
+@export var option2: GridContainer
+
 
 func _ready() -> void:
 	pressed.connect(_button_pressed)
 
 
 func _button_pressed():
+	option2.visible = false
 	EnemyStats.enemyOneStats["Health"]-= PartyStats.mainCharacterAttacks[attack]
-	print(EnemyStats.enemyOneStats["Health"])
-	_is_dead();
+	BattleLogue.currentText = "You dealt " + str(PartyStats.mainCharacterAttacks[attack]) + " damage."
+	BattleFuncs._is_dead();
+	await(BattleFuncs._enemy_turn())
+	option1.visible = true
 			
-static func _is_dead():
-	if EnemyStats.enemyOneStats["Health"] <= 0 :
-		print("enemy died")
-		BattleGlobals.win()
-	else:
-		PartyStats.mainCharacterStats["Health"] -= EnemyStats.enemyOneStats["Damage"]
-		if PartyStats.mainCharacterStats["Health"] <= 0:
-			print("player died")
-			BattleGlobals.lose()

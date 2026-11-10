@@ -30,7 +30,7 @@ func load_scene():
 	if not FileAccess.file_exists("user://savegame.save"):
 		return
 	var save_nodes = get_tree().get_nodes_in_group("Persist")
-	var player = get_tree().get_nodes_in_group("player")
+	var player = get_tree().get_nodes_in_group("Player")
 	var player_path: String
 	for i in save_nodes:
 		if !i in player:
@@ -61,12 +61,13 @@ func load_scene():
 			new_object = load(node_data["filename"]).instantiate()
 			get_node(node_data["parent"]).add_child(new_object)
 			new_object.position = Vector2(node_data["pos_x"], node_data["pos_y"])
+			new_object.rotation = node_data["rot"]
 		else: 
 			new_object = get_node(node_data["path_in_scene"])
 			new_object.position = Vector2(node_data["pos_x"], node_data["pos_y"])
 		# Now we set the remaining variables.
 		for i in node_data.keys():
-			if i == "filename" or i == "parent" or i == "pos_x" or i == "pos_y":
+			if i == "filename" or i == "parent" or i == "pos_x" or i == "pos_y" or "rot":
 				continue
 			new_object.set(i, node_data[i])
 	save_file.close()

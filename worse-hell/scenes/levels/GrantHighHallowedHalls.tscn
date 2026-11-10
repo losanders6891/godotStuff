@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://dkiawdjyqgs43"]
 
+[ext_resource type="Script" uid="uid://dmkhet6bq5c4y" path="res://scripts/level_scripts/level_init.gd" id="1_ud7k3"]
+
 [node name="GrantHighHallowedHalls" type="Node2D" unique_id=624923600]
+script = ExtResource("1_ud7k3")
