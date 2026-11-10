@@ -27,6 +27,11 @@ SaveStuff="*uid://cqmgvxx5xlg5y"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+Persist="what nodes shall persist"
+Player="player"
+
 [input]
 
 forward={

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://buxsf3i3afw6g"]
 
 [ext_resource type="PackedScene" uid="uid://x84ky6xdh74v" path="res://scenes/enemies/test_enemy.tscn" id="1_5vcdo"]
+[ext_resource type="Script" uid="uid://dmkhet6bq5c4y" path="res://scripts/level_scripts/level_init.gd" id="1_n4muf"]
 [ext_resource type="PackedScene" uid="uid://cdgxxowwpxg47" path="res://scenes/overworldscenes/player.tscn" id="2_n4muf"]
 
 [sub_resource type="Curve2D" id="Curve2D_5vcdo"]
@@ -11,9 +12,10 @@ _data = {
 point_count = 10
 
 [node name="DemoLevel" type="Node2D" unique_id=857531336]
+script = ExtResource("1_n4muf")
 
-[node name="player" parent="." unique_id=1569428923 instance=ExtResource("2_n4muf")]
-position = Vector2(-8, 72)
+[node name="player" parent="." unique_id=1569428923 groups=["Persist", "Player"] instance=ExtResource("2_n4muf")]
+position = Vector2(-17, 11)
 scale = Vector2(2, 2)
 camera_zoom_y = 4.0
 camera_zoom_x = 4.0
@@ -25,11 +27,11 @@ position = Vector2(80, 8)
 curve = SubResource("Curve2D_5vcdo")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Path2D" unique_id=144658564]
-rotation = 3.1415925
 
-[node name="test_enemy" parent="Node2D/Path2D/PathFollow2D" unique_id=442742012 instance=ExtResource("1_5vcdo")]
+[node name="test_enemy" parent="Node2D/Path2D/PathFollow2D" unique_id=442742012 groups=["Persist"] instance=ExtResource("1_5vcdo")]
 position = Vector2(1.364242e-12, 0)
 rotation = 3.1415927
+ename = "John"
 
-[node name="test_enemy" parent="." unique_id=566103380 instance=ExtResource("1_5vcdo")]
-position = Vector2(24, -24)
+[node name="test_enemy" parent="." unique_id=566103380 groups=["Persist"] instance=ExtResource("1_5vcdo")]
+position = Vector2(31, -33)
