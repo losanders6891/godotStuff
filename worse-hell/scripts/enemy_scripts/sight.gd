@@ -9,6 +9,8 @@ func _process(_delta: float) -> void:
 			EnemyStats.enemyOneStats["Damage"] = get_parent().damage
 			get_parent().is_alive = false
 			BattleGlobals.save_scene()
+			#get_parent().get_parent().propagate_call("set_owner", [get_parent().get_parent()])
+			#BattleGlobals.currentLevel = 
 			get_tree().change_scene_to_packed(get_parent().battle_Scene)
 
 			
