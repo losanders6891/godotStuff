@@ -30,7 +30,7 @@ func load_scene():
 	if not FileAccess.file_exists("user://savegame.save"):
 		return
 	var save_nodes = get_tree().get_nodes_in_group("Persist")
-	var player = get_tree().get_nodes_in_group("player")
+	var player = get_tree().get_nodes_in_group("Player")
 	var player_path: String
 	for i in save_nodes:
 		if !i in player:
