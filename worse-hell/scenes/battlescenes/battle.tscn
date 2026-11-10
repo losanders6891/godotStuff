@@ -404,6 +404,9 @@ offset_top = 103.0
 offset_right = 406.0
 offset_bottom = 197.0
 
-[node name="dialogue" type="Label" parent="dialoguebox" unique_id=352030529]
+[node name="centerinator" type="CenterContainer" parent="dialoguebox" unique_id=1344801849]
+layout_mode = 2
+
+[node name="dialogue" type="Label" parent="dialoguebox/centerinator" unique_id=352030529]
 layout_mode = 2
 script = ExtResource("8_c6bfc")

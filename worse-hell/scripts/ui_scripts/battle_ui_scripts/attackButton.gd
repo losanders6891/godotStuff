@@ -8,5 +8,6 @@ func _ready() -> void:
 func _button_pressed():
 	EnemyStats.enemyOneStats["Health"]-= PartyStats.mainCharacterAttacks[attack]
 	print(EnemyStats.enemyOneStats["Health"])
+	BattleFuncs._enemy_turn();
 	BattleFuncs._is_dead();
 			
