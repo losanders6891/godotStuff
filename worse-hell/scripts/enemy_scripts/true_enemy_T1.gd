@@ -43,6 +43,7 @@ func save():
 		"parent" : get_parent().get_path(),
 		"pos_x" : position.x, # Vector2 is not supported by JSON
 		"pos_y" : position.y,
+		"rot": rotation,
 		"is_alive" : is_alive,
 		"name": ename,
 		"damage": damage,
