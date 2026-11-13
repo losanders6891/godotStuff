@@ -19,7 +19,8 @@ var player = null
 func _ready() -> void:
 	if !self in get_tree().get_nodes_in_group("Persist"):
 		add_to_group("Persist")
-	
+	if is_alive == false:
+		free()
 	if seePlayer:
 		position += (player.position - position)/speed
 func _process(delta: float) -> void:
@@ -27,7 +28,7 @@ func _process(delta: float) -> void:
 		speed = 20
 		get_parent().progress += speed * delta
 		
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if not get_parent() is PathFollow2D:
 		if seePlayer and player != null:
 			#position += (player.position - position)/speed
@@ -52,10 +53,9 @@ func save():
 		"pos_y" : position.y,
 		"rot": rotation,
 		"is_alive" : is_alive,
-		"name": ename,
+		"ename": ename,
 		"damage": damage,
-		"health": name
-		
+		"health": health
 		}
 	return save_dict
 
@@ -65,7 +65,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	seePlayer = true
 
 
-func _on_area_2d_body_exited(body: Node2D) -> void:
+func _on_area_2d_body_exited(_body: Node2D) -> void:
 	player = null
 	seePlayer = false
 	
