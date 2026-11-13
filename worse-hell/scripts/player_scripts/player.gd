@@ -8,6 +8,7 @@ class_name playerController extends CharacterBody2D
 @export var acceleration = 8
 @export var deceleration = 2
 
+@onready var animations = $AnimatedSprite2D
 @onready var camera: Camera2D = $Camera2D
 func _ready() -> void:
 	camera.zoom = Vector2(camera_zoom_x,camera_zoom_y)
@@ -24,6 +25,14 @@ func _physics_process(_delta: float) -> void:
 		velocity = velocity.move_toward(Vector2(0,0), deceleration)
 	#actually applies movement
 	move_and_slide()
+
+func updateAnimation():
+	var direction = "Down"
+	if velocity.x < 0: direction = "Left"
+	elif velocity.x > 0: direction = "Right"
+	elif velocity.x < 0: direction = "Up"
+	
+	animations.play("walk" + direction)
 	
 func save():
 	var save_dict = {
