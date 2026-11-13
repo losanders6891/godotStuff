@@ -7,7 +7,7 @@
 size = Vector2(4, 4)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kmxma"]
-radius = 27.856777
+radius = 41.5271
 
 [node name="test_enemy" type="CharacterBody2D" unique_id=442742012]
 scale = Vector2(2, 2)
@@ -18,7 +18,7 @@ script = ExtResource("1_pnhpx")
 
 [node name="Sight" type="RayCast2D" parent="." unique_id=1144415551]
 position = Vector2(0, 2)
-target_position = Vector2(-26, 0)
+target_position = Vector2(-16, 0)
 collision_mask = 2
 hit_from_inside = true
 collide_with_areas = true

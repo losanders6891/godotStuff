@@ -1,6 +1,7 @@
 extends Node
 var loseScene: PackedScene = preload("res://scenes/uiscenes/MainMenu.tscn")
-var currentLevel: PackedScene = preload("res://scenes/levels/demoLevel.tscn")
+#temp fix, currently immutable, need to fix in future
+var currentLevel: PackedScene = preload("res://scenes/levels/FirstRoomTestRoen1.tscn")
 var scene_saved = false
 
 func save_scene():
@@ -18,14 +19,12 @@ func save_scene():
 		
 		# Call the node's save function.
 		var node_data = node.call("save")
-		print(node_data["filename"] + " saved")
 		# JSON provides a static method to serialized JSON string.
 		var json_string = JSON.stringify(node_data)
 		
 		# Store the save dictionary as a new line in the save file.
 		save_file.store_line(json_string)
 	scene_saved = true
-	save_file.close()
 func load_scene():
 	if not FileAccess.file_exists("user://savegame.save"):
 		return
@@ -55,7 +54,6 @@ func load_scene():
 		var node_data = json.data
 		var new_object: Node2D
 		# Firstly, we need to create the object and add it to the tree and set its position.
-		print(node_data["filename"])
 		#print(node_data["is_alive"])
 		if node_data["filename"] != player_path:
 			new_object = load(node_data["filename"]).instantiate()
@@ -67,10 +65,9 @@ func load_scene():
 			new_object.position = Vector2(node_data["pos_x"], node_data["pos_y"])
 		# Now we set the remaining variables.
 		for i in node_data.keys():
-			if i == "filename" or i == "parent" or i == "pos_x" or i == "pos_y" or "rot":
-				continue
-			new_object.set(i, node_data[i])
-	save_file.close()
+			if !(i == "filename" or i == "parent" or i == "pos_x" or i == "pos_y" or i == "rot"):
+				new_object.set(i, node_data[i])
+				
 
 func win():
 	PartyStats.mainCharacterStats["Health"] = PartyStats.mainCharacterStats["MaxHealth"]

@@ -12,8 +12,10 @@ class_name playerController extends CharacterBody2D
 @onready var camera: Camera2D = $Camera2D
 func _ready() -> void:
 	camera.zoom = Vector2(camera_zoom_x,camera_zoom_y)
-
-
+	if !self in get_tree().get_nodes_in_group("Persist"):
+		add_to_group("Persist")
+	if !self in get_tree().get_nodes_in_group("Player"):
+		add_to_group("Player")
 func _physics_process(_delta: float) -> void:
 	
 	#gets direction from inputs, normalizes it, and applies movespeed to it
