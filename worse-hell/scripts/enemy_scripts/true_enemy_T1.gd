@@ -6,6 +6,7 @@ class_name EnemyOverworld extends CharacterBody2D
 @export var health:int = 10
 @export var damage:int = 1
 @export var ename:String = "w"
+@export var roSpeed: float = 5.0
 var is_alive = true
 var speed:int = 20
 var direction:int = 1
@@ -32,9 +33,15 @@ func _physics_process(delta: float) -> void:
 			#position += (player.position - position)/speed
 			var Endir = global_position.direction_to(player.global_position)
 			velocity = Endir * speed
+			
+			var tarAngle = global_position.angle_to_point(player.global_position) - deg_to_rad(180)
+			#rotation = lerp_angle(rotation, tarAngle, roSpeed * delta)
+			rotation = rotate_toward(rotation, tarAngle, roSpeed * delta) 
+			
 		else:
 			velocity = Vector2.ZERO
 		move_and_slide()
+		
 		
 
 func save():

@@ -29,6 +29,7 @@ position = Vector2(80, 8)
 curve = SubResource("Curve2D_5vcdo")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Path2D" unique_id=144658564]
+rotation = 3.1415925
 
 [node name="test_enemy" parent="Node2D/Path2D/PathFollow2D" unique_id=442742012 groups=["Persist"] instance=ExtResource("1_5vcdo")]
 position = Vector2(6.972592e-13, -7.6293945e-06)
