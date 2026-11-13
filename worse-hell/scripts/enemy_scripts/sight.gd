@@ -9,15 +9,9 @@ func _process(_delta: float) -> void:
 			EnemyStats.enemyOneStats["Damage"] = get_parent().damage
 			EnemyStats.enemyOneStats["Name"] = get_parent().ename
 			get_parent().is_alive = false
-			var e = get_parent()
-			#finds root node?
-			while e.get_parent() != null:
-				e = e.get_parent()
 			
-			#e.propagate_call("set_owner", [e])
-			#var packed = PackedScene.new()
-			#packed.pack(e)
-			BattleGlobals.currentLevel = load(e.get_scene_file_path())
+			#causes strange errpr where node paths are wrong
+			#BattleGlobals.currentLevel = get_parent().current_scene
 			BattleGlobals.save_scene()
 			get_tree().change_scene_to_packed(get_parent().battle_Scene)
 

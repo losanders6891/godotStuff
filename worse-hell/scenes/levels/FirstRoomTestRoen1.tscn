@@ -320,6 +320,7 @@ animation = &"Idle right"
 [node name="test_enemy" parent="." unique_id=442742012 groups=["Persist"] instance=ExtResource("5_c3biy")]
 position = Vector2(89.99999, -50.999996)
 scale = Vector2(5, 5)
+current_scene = null
 
 [node name="Area2D" type="Area2D" parent="." unique_id=917850039]
 script = ExtResource("7_ox3rx")

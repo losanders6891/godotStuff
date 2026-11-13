@@ -6,14 +6,16 @@ class_name EnemyOverworld extends CharacterBody2D
 @export var health:int = 10
 @export var damage:int = 1
 @export var ename:String = "w"
+
 var is_alive = true
 var speed:int = 20
 var direction:int = 1
 var seePlayer:bool = false
 var player = null
 ##note: this is hard coded right now, you may have to manually change it
+@export_category("neccessary info")
 @export var battle_Scene:PackedScene = preload("res://scenes/battlescenes/battle.tscn")
-
+@export var current_scene: PackedScene = preload("res://scenes/levels/demoLevel.tscn")
 
 func _ready() -> void:
 	if !self in get_tree().get_nodes_in_group("Persist"):
