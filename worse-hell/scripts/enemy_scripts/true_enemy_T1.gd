@@ -37,7 +37,7 @@ func _physics_process(_delta: float) -> void:
 			
 			var tarAngle = global_position.angle_to_point(player.global_position) - deg_to_rad(180)
 			#rotation = lerp_angle(rotation, tarAngle, roSpeed * delta)
-			rotation = rotate_toward(rotation, tarAngle, roSpeed * delta) 
+			rotation = rotate_toward(rotation, tarAngle, roSpeed * _delta) 
 			
 		else:
 			velocity = Vector2.ZERO
