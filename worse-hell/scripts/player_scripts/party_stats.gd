@@ -1,14 +1,13 @@
 extends Node
 
-var damage = 2
 var mainCharacterStats = {
 	"Level" : 1,
 	"Health" : 10,
 	"MaxHealth": 10,
 }
 var mainCharacterAttacks = {
-	"one": 2 ,
-	"two": 0
+	"punch": 2 ,
+	"kick": 0
 }
 # target 0 = self, target 1 = enemy
 var playerInventory = [
