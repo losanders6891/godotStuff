@@ -1,4 +1,4 @@
-﻿The FontStruction “PICO-8”
+The FontStruction “PICO-8”
 (https://fontstruct.com/fontstructions/show/2052852) by “Simbax” is licensed
 under a Creative Commons CC0 Public Domain Dedication license
 (http://creativecommons.org/publicdomain/zero/1.0/).
