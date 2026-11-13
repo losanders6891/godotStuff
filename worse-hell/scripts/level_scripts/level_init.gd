@@ -6,4 +6,3 @@ func _ready() -> void:
 		BattleGlobals.load_scene()
 	else:
 		BattleGlobals.load_scene()
-	

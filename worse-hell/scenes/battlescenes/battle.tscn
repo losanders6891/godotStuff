@@ -379,13 +379,15 @@ attack = "one"
 option1 = NodePath("../../option1")
 option2 = NodePath("..")
 
-[node name="Kick" type="Button" parent="option2" unique_id=1956381096]
+[node name="Kick" type="Button" parent="option2" unique_id=1956381096 node_paths=PackedStringArray("option1", "option2")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "kick"
 script = ExtResource("4_a12nh")
 attack = "two"
+option1 = NodePath("../../option1")
+option2 = NodePath("..")
 
 [node name="yes" type="Button" parent="option2" unique_id=1544234421]
 layout_mode = 2
