@@ -351,7 +351,7 @@ script = ExtResource("4_lpir7")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Ability"
+text = "Ability (OUT OF ORDER)"
 
 [node name="Item" type="Button" parent="BattleOptions" unique_id=1359493499]
 layout_mode = 2
