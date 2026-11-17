@@ -276,7 +276,7 @@ curve = SubResource("Curve2D_c3biy")
 position = Vector2(16, 0)
 rotation = 3.1415925
 
-[node name="test_enemy2path" parent="Node2D/Path2D/PathFollow2D" unique_id=1960917553 instance=ExtResource("5_c3biy")]
+[node name="test_enemy2path" parent="Node2D/Path2D/PathFollow2D" unique_id=1960917553 groups=["Persist"] instance=ExtResource("5_c3biy")]
 rotation = 3.1415927
 scale = Vector2(4, 4)
 
