@@ -228,6 +228,13 @@ sources/2 = SubResource("TileSetAtlasSource_1uiyt")
 [sub_resource type="CircleShape2D" id="CircleShape2D_rpall"]
 radius = 28.79236
 
+[sub_resource type="Curve2D" id="Curve2D_c3biy"]
+bake_interval = 7.0
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 16, 0, 0, 0, 0, 0, -16, 0, 0, 0, 0, 0, -16, 8, 0, 0, 0, 0, -16, 24, 0, 0, 0, 0, -16, 32, 0, 0, 0, 0, 24, 32, 0, 0, 0, 0, 24, 24, 0, 0, 0, 0, 24, 8, 0, 0, 0, 0, 24, 0, 0, 0, 0, 0, 16, 0)
+}
+point_count = 10
+
 [node name="FirstRoomTestRoen1" type="Node2D" unique_id=365078348]
 script = ExtResource("1_48smr")
 
@@ -249,7 +256,7 @@ acceleration = 800
 deceleration = 750
 
 [node name="test_enemy" parent="." unique_id=442742012 groups=["Persist"] instance=ExtResource("5_c3biy")]
-position = Vector2(104, -48)
+position = Vector2(83.999954, -32.000004)
 scale = Vector2(5, 5)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=917850039]
@@ -258,6 +265,20 @@ script = ExtResource("7_ox3rx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1458243528]
 position = Vector2(-235, 54)
 shape = SubResource("CircleShape2D_rpall")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1377729184]
+position = Vector2(-224, -32)
+
+[node name="Path2D" type="Path2D" parent="Node2D" unique_id=611405497]
+curve = SubResource("Curve2D_c3biy")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Path2D" unique_id=90030021]
+position = Vector2(16, 0)
+rotation = 3.1415925
+
+[node name="test_enemy2path" parent="Node2D/Path2D/PathFollow2D" unique_id=1960917553 instance=ExtResource("5_c3biy")]
+rotation = 3.1415927
+scale = Vector2(4, 4)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
