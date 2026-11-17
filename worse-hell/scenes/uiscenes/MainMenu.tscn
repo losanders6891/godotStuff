@@ -13,7 +13,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_kpaqk"]
 font = ExtResource("2_k662t")
-font_size = 75
+font_size = 41
 
 [sub_resource type="LabelSettings" id="LabelSettings_bvuqh"]
 font_size = 32
@@ -36,7 +36,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="Main Menu/VBoxContainer" unique_id=807229081]
 layout_mode = 2
-text = "THE GAME"
+text = "PORTLAND SIMULATOR"
 label_settings = SubResource("LabelSettings_kpaqk")
 
 [node name="HSeparator" type="HSeparator" parent="Main Menu/VBoxContainer" unique_id=348842752]
