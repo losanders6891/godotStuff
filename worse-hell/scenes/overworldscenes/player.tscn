@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bopo70gu85xmq" path="res://scripts/player_scripts/player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://dnawg7blmggis" path="res://sprites/Spritesheets/Player Spritesheets/RoenOverworldSpritesheetAlpha.png" id="2_jcti8"]
+[ext_resource type="PackedScene" uid="uid://c3fbxpbi35lj5" path="res://pause_menu.tscn" id="3_jyaa2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q7die"]
 size = Vector2(2, 2)
@@ -207,3 +208,9 @@ position = Vector2(2.018273, 2)
 scale = Vector2(0.24771588, 0.2579599)
 sprite_frames = SubResource("SpriteFrames_flqq7")
 animation = &"Idle left"
+
+[node name="Control" parent="." unique_id=51358746 instance=ExtResource("3_jyaa2")]
+offset_left = -576.0
+offset_top = -328.0
+offset_right = -576.0
+offset_bottom = -328.0
