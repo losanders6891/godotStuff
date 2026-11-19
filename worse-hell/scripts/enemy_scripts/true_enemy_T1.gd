@@ -6,12 +6,13 @@ class_name EnemyOverworld extends CharacterBody2D
 @export var health:int = 10
 @export var damage:int = 1
 @export var ename:String = "w"
-@export var roSpeed: float = 5.0
+var roSpeed: float = 5.0
 var is_alive = true
 var speed:int = 20
 var direction:int = 1
 var seePlayer:bool = false
 var player = null
+var xpAmount: float = 4.0
 ##note: this is hard coded right now, you may have to manually change it
 @export_category("neccessary info")
 @export var battle_Scene:PackedScene = preload("res://scenes/battlescenes/battle.tscn")
@@ -44,7 +45,14 @@ func _physics_process(_delta: float) -> void:
 			velocity = Vector2.ZERO
 		move_and_slide()
 		
+		# New fun stuff that will be implemented when ZG finishes his stats for the party memeber
+		# Note: Acquire the information from the enemy that its health is less than or equal to zero,
+		# then ensure that you can acess the stat of XP for the player and add it to the playerXP
+		# Information about patry XP added as a whole will be added later.
+#func bestowXP():
+	#if EnemyStats.enemyOneStats["Health"] <= 0:
 		
+
 
 func save():
 	var save_dict = {
