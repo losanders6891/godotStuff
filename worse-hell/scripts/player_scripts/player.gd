@@ -8,6 +8,7 @@ class_name playerController extends CharacterBody2D
 @export var acceleration = 8
 @export var deceleration = 2
 var last_dir = Vector2.DOWN
+@onready var settings: Control = $Control
 
 @onready var animations = $AnimatedSprite2D
 @onready var camera: Camera2D = $Camera2D
@@ -17,8 +18,12 @@ func _ready() -> void:
 		add_to_group("Persist")
 	if !self in get_tree().get_nodes_in_group("Player"):
 		add_to_group("Player")
+	settings.visible = false
+	settings.scale = Vector2(1.0/camera_zoom_x,1.0/camera_zoom_y)
 func _physics_process(_delta: float) -> void:
-	
+	if Input.is_action_pressed("menu"):
+		settings.visible = true
+		get_tree().paused = true
 	#gets direction from inputs, normalizes it, and applies movespeed to it
 	var dir = Input.get_vector("left","right","forward","backward").normalized()
 	if dir:
