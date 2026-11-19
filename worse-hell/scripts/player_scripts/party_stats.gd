@@ -9,6 +9,11 @@ var mainCharacterAttacks = {
 	"punch": 2 ,
 	"kick": 0
 }
+
+var party = {
+	 PartyMember.create()
+}
+
 # target 0 = self, target 1 = enemy
 var playerInventory = [
 	{
